@@ -11,8 +11,8 @@
       "links": [],
       "anchors": {},
       "fname": "403",
-      "updated": 1639771339619,
-      "created": 1639771339619,
+      "updated": 1639773236605,
+      "created": 1639773236605,
       "parent": null,
       "children": [],
       "data": {}
@@ -74,10 +74,47 @@
       "created": 1639770598648,
       "parent": "rg4icNT5Vsmg1EL6OA9St",
       "children": [
-        "2yA501ntEdXEMxKAJrL7o"
+        "2yA501ntEdXEMxKAJrL7o",
+        "rVWqjtG6tA9UvKnP74NHn"
       ],
       "data": {},
       "contentHash": "abacd1293357554b472bf34dbea3ae21",
+      "custom": {}
+    },
+    "rVWqjtG6tA9UvKnP74NHn": {
+      "id": "rVWqjtG6tA9UvKnP74NHn",
+      "title": "Makefile",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [],
+      "anchors": {
+        "what-is-makefile": {
+          "type": "header",
+          "text": "What is Makefile",
+          "value": "what-is-makefile",
+          "line": 9,
+          "column": 0,
+          "depth": 3
+        },
+        "useful-makefile": {
+          "type": "header",
+          "text": "Useful Makefile",
+          "value": "useful-makefile",
+          "line": 13,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "fname": "Proggramming Language.Makefile",
+      "updated": 1639772405725,
+      "created": 1639772361844,
+      "parent": "fTtWJ5vX5IBeAzAUYdPP7",
+      "children": [],
+      "data": {},
+      "contentHash": "b50fc24d2346d0b7ce3841c086cc65a8",
       "custom": {}
     },
     "2yA501ntEdXEMxKAJrL7o": {
@@ -101,13 +138,13 @@
           "position": {
             "start": {
               "line": 8,
-              "column": 1,
-              "offset": 99
+              "column": 3,
+              "offset": 101
             },
             "end": {
               "line": 8,
-              "column": 37,
-              "offset": 135
+              "column": 39,
+              "offset": 137
             },
             "indent": []
           },
@@ -129,13 +166,13 @@
           "position": {
             "start": {
               "line": 10,
-              "column": 1,
-              "offset": 137
+              "column": 3,
+              "offset": 207
             },
             "end": {
               "line": 10,
-              "column": 42,
-              "offset": 178
+              "column": 44,
+              "offset": 248
             },
             "indent": []
           },
@@ -157,13 +194,13 @@
           "position": {
             "start": {
               "line": 12,
-              "column": 1,
-              "offset": 180
+              "column": 3,
+              "offset": 316
             },
             "end": {
               "line": 12,
-              "column": 40,
-              "offset": 219
+              "column": 42,
+              "offset": 355
             },
             "indent": []
           },
@@ -185,13 +222,13 @@
           "position": {
             "start": {
               "line": 14,
-              "column": 1,
-              "offset": 221
+              "column": 3,
+              "offset": 412
             },
             "end": {
               "line": 14,
-              "column": 63,
-              "offset": 283
+              "column": 65,
+              "offset": 474
             },
             "indent": []
           },
@@ -213,7 +250,7 @@
         }
       },
       "fname": "Proggramming Language.C++",
-      "updated": 1639771214596,
+      "updated": 1639772303058,
       "created": 1639770615434,
       "parent": "fTtWJ5vX5IBeAzAUYdPP7",
       "children": [
@@ -223,7 +260,7 @@
         "dd3WJmBMuqsk3FaTHypXQ"
       ],
       "data": {},
-      "contentHash": "95b132d4406c571fc9dccb1763cf0906",
+      "contentHash": "d5c2c8c545201bb89fcb0ceb77c3123e",
       "custom": {}
     },
     "dd3WJmBMuqsk3FaTHypXQ": {
@@ -244,13 +281,13 @@
           "position": {
             "start": {
               "line": 8,
-              "column": 1,
-              "offset": 99
+              "column": 3,
+              "offset": 101
             },
             "end": {
               "line": 8,
-              "column": 37,
-              "offset": 135
+              "column": 39,
+              "offset": 137
             },
             "indent": []
           },
@@ -414,13 +451,13 @@
           "position": {
             "start": {
               "line": 10,
-              "column": 1,
-              "offset": 137
+              "column": 3,
+              "offset": 207
             },
             "end": {
               "line": 10,
-              "column": 42,
-              "offset": 178
+              "column": 44,
+              "offset": 248
             },
             "indent": []
           },
@@ -512,13 +549,13 @@
           "position": {
             "start": {
               "line": 12,
-              "column": 1,
-              "offset": 180
+              "column": 3,
+              "offset": 316
             },
             "end": {
               "line": 12,
-              "column": 40,
-              "offset": 219
+              "column": 42,
+              "offset": 355
             },
             "indent": []
           },
@@ -562,13 +599,13 @@
           "position": {
             "start": {
               "line": 14,
-              "column": 1,
-              "offset": 221
+              "column": 3,
+              "offset": 412
             },
             "end": {
               "line": 14,
-              "column": 63,
-              "offset": 283
+              "column": 65,
+              "offset": 474
             },
             "indent": []
           },
@@ -660,12 +697,12 @@
         }
       },
       "fname": "Notes.Publish-Notes",
-      "updated": 1639766960238,
+      "updated": 1639773203288,
       "created": 1639766242076,
       "parent": "3NyZZxlIgyYkAdFspeaa7",
       "children": [],
       "data": {},
-      "contentHash": "242a9dd69d76e15a1bd69aad87099a78",
+      "contentHash": "12994075b09e48ae68b6e0237e6226aa",
       "custom": {}
     }
   },

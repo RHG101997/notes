@@ -44,7 +44,7 @@ For building and Previewing( `https://localhost:3000`):
 npx dendron publish dev
 ```
 
-For publishing we need to run a export with a `github` target:
+**For publishing we need to run a export with a `github` target:**
 
 ```bash
 dendron publish export --target github

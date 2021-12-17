@@ -2,7 +2,7 @@
 id: AXP8DZ5DgD9L4h4a2gO0u
 title: Publish-Notes
 desc: ''
-updated: 1639766960238
+updated: 1639773203288
 created: 1639766242076
 ---
 
@@ -51,7 +51,7 @@ For building and Previewing( `https://localhost:3000`):
 npx dendron publish dev
 ```
 
-For publishing we need to run a export with a `github` target:
+**For publishing we need to run a export with a `github` target:**
 
 ```bash
 dendron publish export --target github
