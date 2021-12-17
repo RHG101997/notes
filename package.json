@@ -1,0 +1,23 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RHG101997/notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RHG101997/notes/issues"
+  },
+  "homepage": "https://github.com/RHG101997/notes#readme",
+  "dependencies": {
+    "@dendronhq/dendron-cli": "^0.73.0"
+  }
+}

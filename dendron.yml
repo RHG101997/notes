@@ -6,6 +6,8 @@ useKatex: true
 dev:
     enablePreviewV2: true
 site:
+    assetsPrefix: /notes
+    siteUrl: https://www.richardhg.com/
     copyAssets: true
     siteHierarchies:
         - root
