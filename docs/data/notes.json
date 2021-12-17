@@ -11,8 +11,8 @@
       "links": [],
       "anchors": {},
       "fname": "403",
-      "updated": 1639765794452,
-      "created": 1639765794452,
+      "updated": 1639767302457,
+      "created": 1639767302457,
       "parent": null,
       "children": [],
       "data": {}
@@ -48,13 +48,89 @@
       "updated": 1639763415274,
       "created": 1639763368541,
       "parent": null,
-      "children": [],
+      "children": [
+        "3NyZZxlIgyYkAdFspeaa7"
+      ],
       "data": {},
       "contentHash": "adc56c2bec61fcefc1ea6061cf31f063",
       "custom": {
         "nav_order": 0,
         "permalink": "/"
       }
+    },
+    "3NyZZxlIgyYkAdFspeaa7": {
+      "id": "3NyZZxlIgyYkAdFspeaa7",
+      "title": "Notes",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [],
+      "anchors": {
+        "information": {
+          "type": "header",
+          "text": "Information",
+          "value": "information",
+          "line": 9,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "fname": "Notes",
+      "updated": 1639766210063,
+      "created": 1639766139861,
+      "parent": "rg4icNT5Vsmg1EL6OA9St",
+      "children": [
+        "AXP8DZ5DgD9L4h4a2gO0u"
+      ],
+      "data": {},
+      "contentHash": "db7994c2d85b027114370dfdc9e63ea1",
+      "custom": {}
+    },
+    "AXP8DZ5DgD9L4h4a2gO0u": {
+      "id": "AXP8DZ5DgD9L4h4a2gO0u",
+      "title": "Publish-Notes",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [],
+      "anchors": {
+        "how-to-publish-my-notesremainder": {
+          "type": "header",
+          "text": "How to publish my Notes(Remainder):",
+          "value": "how-to-publish-my-notesremainder",
+          "line": 9,
+          "column": 0,
+          "depth": 2
+        },
+        "requirements": {
+          "type": "header",
+          "text": "Requirements:",
+          "value": "requirements",
+          "line": 15,
+          "column": 0,
+          "depth": 3
+        },
+        "publishing-commands": {
+          "type": "header",
+          "text": "Publishing Commands",
+          "value": "publishing-commands",
+          "line": 45,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "fname": "Notes.Publish-Notes",
+      "updated": 1639766960238,
+      "created": 1639766242076,
+      "parent": "3NyZZxlIgyYkAdFspeaa7",
+      "children": [],
+      "data": {},
+      "contentHash": "242a9dd69d76e15a1bd69aad87099a78",
+      "custom": {}
     }
   },
   "domains": [
@@ -89,7 +165,9 @@
       "updated": 1639763415274,
       "created": 1639763368541,
       "parent": null,
-      "children": [],
+      "children": [
+        "3NyZZxlIgyYkAdFspeaa7"
+      ],
       "data": {},
       "contentHash": "adc56c2bec61fcefc1ea6061cf31f063",
       "custom": {
@@ -130,7 +208,9 @@
     "updated": 1639763415274,
     "created": 1639763368541,
     "parent": null,
-    "children": [],
+    "children": [
+      "3NyZZxlIgyYkAdFspeaa7"
+    ],
     "data": {},
     "contentHash": "adc56c2bec61fcefc1ea6061cf31f063",
     "custom": {
