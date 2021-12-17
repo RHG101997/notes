@@ -11,8 +11,8 @@
       "links": [],
       "anchors": {},
       "fname": "403",
-      "updated": 1639767302457,
-      "created": 1639767302457,
+      "updated": 1639771339619,
+      "created": 1639771339619,
       "parent": null,
       "children": [],
       "data": {}
@@ -49,7 +49,8 @@
       "created": 1639763368541,
       "parent": null,
       "children": [
-        "3NyZZxlIgyYkAdFspeaa7"
+        "3NyZZxlIgyYkAdFspeaa7",
+        "fTtWJ5vX5IBeAzAUYdPP7"
       ],
       "data": {},
       "contentHash": "adc56c2bec61fcefc1ea6061cf31f063",
@@ -57,6 +58,541 @@
         "nav_order": 0,
         "permalink": "/"
       }
+    },
+    "fTtWJ5vX5IBeAzAUYdPP7": {
+      "id": "fTtWJ5vX5IBeAzAUYdPP7",
+      "title": "Proggramming Language",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "fname": "Proggramming Language",
+      "updated": 1639770610062,
+      "created": 1639770598648,
+      "parent": "rg4icNT5Vsmg1EL6OA9St",
+      "children": [
+        "2yA501ntEdXEMxKAJrL7o"
+      ],
+      "data": {},
+      "contentHash": "abacd1293357554b472bf34dbea3ae21",
+      "custom": {}
+    },
+    "2yA501ntEdXEMxKAJrL7o": {
+      "id": "2yA501ntEdXEMxKAJrL7o",
+      "title": "C++",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "id": "2yA501ntEdXEMxKAJrL7o",
+            "vaultName": "vault"
+          },
+          "value": "Proggramming Language.C++.C++V11",
+          "alias": "Proggramming Language.C++.C++V11",
+          "position": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 99
+            },
+            "end": {
+              "line": 8,
+              "column": 37,
+              "offset": 135
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "Proggramming Language.C++.C++V11"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "id": "2yA501ntEdXEMxKAJrL7o",
+            "vaultName": "vault"
+          },
+          "value": "Proggramming Language.C++.C++ Streams",
+          "alias": "Proggramming Language.C++.C++ Streams",
+          "position": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 137
+            },
+            "end": {
+              "line": 10,
+              "column": 42,
+              "offset": 178
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "Proggramming Language.C++.C++ Streams"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "id": "2yA501ntEdXEMxKAJrL7o",
+            "vaultName": "vault"
+          },
+          "value": "Proggramming Language.C++.C++ Const",
+          "alias": "Proggramming Language.C++.C++ Const",
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 180
+            },
+            "end": {
+              "line": 12,
+              "column": 40,
+              "offset": 219
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "Proggramming Language.C++.C++ Const"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "id": "2yA501ntEdXEMxKAJrL7o",
+            "vaultName": "vault"
+          },
+          "value": "Proggramming Language.C++.C++ Compiler Generated Functions",
+          "alias": "Proggramming Language.C++.C++ Compiler Generated Functions",
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 221
+            },
+            "end": {
+              "line": 14,
+              "column": 63,
+              "offset": 283
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "Proggramming Language.C++.C++ Compiler Generated Functions"
+          }
+        }
+      ],
+      "anchors": {
+        "information": {
+          "type": "header",
+          "text": "Information",
+          "value": "information",
+          "line": 9,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "Proggramming Language.C++",
+      "updated": 1639771214596,
+      "created": 1639770615434,
+      "parent": "fTtWJ5vX5IBeAzAUYdPP7",
+      "children": [
+        "JdUsXN4UVO4UJReFKYkIy",
+        "isuZbpDxnkAPr9IPuFIfz",
+        "890WfoWQ9bmoUsyzSkHYq",
+        "dd3WJmBMuqsk3FaTHypXQ"
+      ],
+      "data": {},
+      "contentHash": "95b132d4406c571fc9dccb1763cf0906",
+      "custom": {}
+    },
+    "dd3WJmBMuqsk3FaTHypXQ": {
+      "id": "dd3WJmBMuqsk3FaTHypXQ",
+      "title": "C++V11",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [
+        {
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 99
+            },
+            "end": {
+              "line": 8,
+              "column": 37,
+              "offset": 135
+            },
+            "indent": []
+          },
+          "value": "Proggramming Language.C++.C++V11"
+        }
+      ],
+      "anchors": {
+        "c-11-link-to-video": {
+          "type": "header",
+          "text": "C++ 11 Link to Video",
+          "value": "c-11-link-to-video",
+          "line": 9,
+          "column": 0,
+          "depth": 2
+        },
+        "initializer-list": {
+          "type": "header",
+          "text": "Initializer List",
+          "value": "initializer-list",
+          "line": 13,
+          "column": 0,
+          "depth": 3
+        },
+        "uniform-initialization": {
+          "type": "header",
+          "text": "Uniform Initialization",
+          "value": "uniform-initialization",
+          "line": 49,
+          "column": 0,
+          "depth": 3
+        },
+        "auto-type": {
+          "type": "header",
+          "text": "Auto Type",
+          "value": "auto-type",
+          "line": 95,
+          "column": 0,
+          "depth": 3
+        },
+        "foreach": {
+          "type": "header",
+          "text": "foreach",
+          "value": "foreach",
+          "line": 124,
+          "column": 0,
+          "depth": 3
+        },
+        "nullptr": {
+          "type": "header",
+          "text": "nullptr",
+          "value": "nullptr",
+          "line": 153,
+          "column": 0,
+          "depth": 3
+        },
+        "enum-class": {
+          "type": "header",
+          "text": "enum class",
+          "value": "enum-class",
+          "line": 169,
+          "column": 0,
+          "depth": 3
+        },
+        "static-assert": {
+          "type": "header",
+          "text": "static assert",
+          "value": "static-assert",
+          "line": 200,
+          "column": 0,
+          "depth": 3
+        },
+        "delegating-constructor": {
+          "type": "header",
+          "text": "delegating constructor",
+          "value": "delegating-constructor",
+          "line": 210,
+          "column": 0,
+          "depth": 3
+        },
+        "constexpr": {
+          "type": "header",
+          "text": "constexpr",
+          "value": "constexpr",
+          "line": 236,
+          "column": 0,
+          "depth": 3
+        },
+        "new-string-literals": {
+          "type": "header",
+          "text": "New string literals",
+          "value": "new-string-literals",
+          "line": 261,
+          "column": 0,
+          "depth": 3
+        },
+        "keyword-final": {
+          "type": "header",
+          "text": "Keyword final",
+          "value": "keyword-final",
+          "line": 276,
+          "column": 0,
+          "depth": 3
+        },
+        "keyword-delete": {
+          "type": "header",
+          "text": "Keyword delete",
+          "value": "keyword-delete",
+          "line": 288,
+          "column": 0,
+          "depth": 3
+        },
+        "keyword-default-for-default-constructor": {
+          "type": "header",
+          "text": "Keyword default (for default constructor)",
+          "value": "keyword-default-for-default-constructor",
+          "line": 309,
+          "column": 0,
+          "depth": 3
+        },
+        "keyword-override-for-virtual-function": {
+          "type": "header",
+          "text": "Keyword override (for virtual function)",
+          "value": "keyword-override-for-virtual-function",
+          "line": 328,
+          "column": 0,
+          "depth": 3
+        },
+        "lambda-function": {
+          "type": "header",
+          "text": "Lambda Function",
+          "value": "lambda-function",
+          "line": 360,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "fname": "Proggramming Language.C++.C++V11",
+      "updated": 1639771075501,
+      "created": 1639771031461,
+      "parent": "2yA501ntEdXEMxKAJrL7o",
+      "children": [],
+      "data": {},
+      "contentHash": "70e677e054cb95fee31c341ba3e0d768",
+      "custom": {}
+    },
+    "890WfoWQ9bmoUsyzSkHYq": {
+      "id": "890WfoWQ9bmoUsyzSkHYq",
+      "title": "C++ Streams",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [
+        {
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 137
+            },
+            "end": {
+              "line": 10,
+              "column": 42,
+              "offset": 178
+            },
+            "indent": []
+          },
+          "value": "Proggramming Language.C++.C++ Streams"
+        }
+      ],
+      "anchors": {
+        "intro-link": {
+          "type": "header",
+          "text": "Intro: Link",
+          "value": "intro-link",
+          "line": 9,
+          "column": 0,
+          "depth": 2
+        },
+        "file-stream-and-error-handling-link": {
+          "type": "header",
+          "text": "File Stream and Error Handling: Link",
+          "value": "file-stream-and-error-handling-link",
+          "line": 39,
+          "column": 0,
+          "depth": 2
+        },
+        "formatted-and-unformatted-io-link": {
+          "type": "header",
+          "text": "Formatted and Unformatted IO: Link",
+          "value": "formatted-and-unformatted-io-link",
+          "line": 98,
+          "column": 0,
+          "depth": 2
+        },
+        "manipulators-link": {
+          "type": "header",
+          "text": "Manipulators: Link",
+          "value": "manipulators-link",
+          "line": 163,
+          "column": 0,
+          "depth": 2
+        },
+        "stream-buffer-link": {
+          "type": "header",
+          "text": "Stream Buffer: Link",
+          "value": "stream-buffer-link",
+          "line": 194,
+          "column": 0,
+          "depth": 2
+        },
+        "string-stream--link": {
+          "type": "header",
+          "text": "String Stream : Link",
+          "value": "string-stream--link",
+          "line": 238,
+          "column": 0,
+          "depth": 2
+        },
+        "enable-streaming-for-your-own-class-link": {
+          "type": "header",
+          "text": "Enable Streaming for Your Own Class: Link",
+          "value": "enable-streaming-for-your-own-class-link",
+          "line": 270,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "Proggramming Language.C++.C++ Streams",
+      "updated": 1639771110085,
+      "created": 1639771099979,
+      "parent": "2yA501ntEdXEMxKAJrL7o",
+      "children": [],
+      "data": {},
+      "contentHash": "4d3b4af72a70740b2ef70998ab40bd2f",
+      "custom": {}
+    },
+    "isuZbpDxnkAPr9IPuFIfz": {
+      "id": "isuZbpDxnkAPr9IPuFIfz",
+      "title": "C++ Const",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [
+        {
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 180
+            },
+            "end": {
+              "line": 12,
+              "column": 40,
+              "offset": 219
+            },
+            "indent": []
+          },
+          "value": "Proggramming Language.C++.C++ Const"
+        }
+      ],
+      "anchors": {
+        "with-functions": {
+          "type": "header",
+          "text": "with functions",
+          "value": "with-functions",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "Proggramming Language.C++.C++ Const",
+      "updated": 1639771141678,
+      "created": 1639771140562,
+      "parent": "2yA501ntEdXEMxKAJrL7o",
+      "children": [],
+      "data": {},
+      "contentHash": "af3ed730b3ef74a6fa81a0c48192af2d",
+      "custom": {}
+    },
+    "JdUsXN4UVO4UJReFKYkIy": {
+      "id": "JdUsXN4UVO4UJReFKYkIy",
+      "title": "C++ Compiler Generated Functions",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [
+        {
+          "from": {
+            "fname": "Proggramming Language.C++",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 221
+            },
+            "end": {
+              "line": 14,
+              "column": 63,
+              "offset": 283
+            },
+            "indent": []
+          },
+          "value": "Proggramming Language.C++.C++ Compiler Generated Functions"
+        }
+      ],
+      "anchors": {
+        "what-are-generated-functions": {
+          "type": "header",
+          "text": "What are generated functions:",
+          "value": "what-are-generated-functions",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "Proggramming Language.C++.C++ Compiler Generated Functions",
+      "updated": 1639771203623,
+      "created": 1639771193945,
+      "parent": "2yA501ntEdXEMxKAJrL7o",
+      "children": [],
+      "data": {},
+      "contentHash": "da53dd9af21976ce38fba9b341e6fe11",
+      "custom": {}
     },
     "3NyZZxlIgyYkAdFspeaa7": {
       "id": "3NyZZxlIgyYkAdFspeaa7",
@@ -166,7 +702,8 @@
       "created": 1639763368541,
       "parent": null,
       "children": [
-        "3NyZZxlIgyYkAdFspeaa7"
+        "3NyZZxlIgyYkAdFspeaa7",
+        "fTtWJ5vX5IBeAzAUYdPP7"
       ],
       "data": {},
       "contentHash": "adc56c2bec61fcefc1ea6061cf31f063",
@@ -209,7 +746,8 @@
     "created": 1639763368541,
     "parent": null,
     "children": [
-      "3NyZZxlIgyYkAdFspeaa7"
+      "3NyZZxlIgyYkAdFspeaa7",
+      "fTtWJ5vX5IBeAzAUYdPP7"
     ],
     "data": {},
     "contentHash": "adc56c2bec61fcefc1ea6061cf31f063",
