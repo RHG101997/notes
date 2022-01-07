@@ -2,7 +2,7 @@
 id: n3oQ8wprzuusO1bnzmjoM
 title: Review-Notes
 desc: ''
-updated: 1641574810176
+updated: 1641575925357
 created: 1641570990433
 ---
 
@@ -15,14 +15,14 @@ WHen writing a paper your writing for others. How write it so that the intention
 * Abstract
 * summary
 * Intro
-- Background and Motivation of problem
-- Descriptioon of the solution.
+    - Background and Motivation of problem
+    - Descriptioon of the solution.
 * Related work
-- Compare your work to others
+    - Compare your work to others
 * Approach
-- Technical
+    - Technical
 * Experiments
-- Validation of the approach
+    - Validation of the approach
 * Conslusion
 
 
@@ -36,14 +36,15 @@ WHen writing a paper your writing for others. How write it so that the intention
 
 * Understand the details
 * Especially
-1. The approuch 
-2. Experimentation
+    1. The approuch 
+    2. Experimentation
+
 
 ### Second Reading 
 
 Section by section:
 
- Certain expectation are met?
+Certain expectation are met?
 
 
 ## Expectation
@@ -82,19 +83,19 @@ A realistic evaulation of the proposed approach.
 What to watch for :
 
 * Is there a realistic implementation of the approach? (High-less Priority)
-1. Actual devices implemented
-2. Emulation on real devices
-3. SImulation with reaalistic tools(Check result)
-4. Authors own code in anon realistc enviroment()
-5. No implementation but just discussions(Reject)
+    1. Actual devices implemented
+    2. Emulation on real devices
+    3. SImulation with reaalistic tools(Check result)
+    4. Authors own code in anon realistc enviroment()
+    5. No implementation but just discussions(Reject)
 
 * Is code avaible? Repeatability?
 * Is there a comparision with  alternative approaches [Bechmarks, some kind of metrics.]
 * Are the result making sense?
-1. Any suspicius trends
-2. Any result that were not put in the paper
-3. Are result scalable? or corner case?
-4. Are they significant? (repeated)(trade off)
+    1. Any suspicius trends
+    2. Any result that were not put in the paper
+    3. Are result scalable? or corner case?
+    4. Are they significant? (repeated)(trade off)
 
 
 #### Analystical Evaluation Check
