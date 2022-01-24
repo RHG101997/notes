@@ -2,18 +2,18 @@
 id: n3oQ8wprzuusO1bnzmjoM
 title: Review-Notes
 desc: ''
-updated: 1641575925357
+updated: 1643048999057
 created: 1641570990433
 ---
 
 ## Notes Tips Review
 
-WHen writing a paper your writing for others. How write it so that the intention passes to others
+When writing a paper your writing for others. How write it so that the intention passes to others
 
 ### Componets:
 
 * Abstract
-* summary
+* Summary
 * Intro
     - Background and Motivation of problem
     - Descriptioon of the solution.
@@ -46,6 +46,7 @@ Section by section:
 
 Certain expectation are met?
 
+---
 
 ## Expectation
 
@@ -53,7 +54,7 @@ Certain expectation are met?
 
 > If reader not excited by intro, paper is lost
 
-* dis they define the reseach challange and why id unquie/important
+* Did they define the reseach challange and why id unquie/important
 * Did they describe their appriuch's constribution?
 * Are you able to follow the write up? Flow  the above points
 
