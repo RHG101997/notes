@@ -2,19 +2,32 @@
 id: rg4icNT5Vsmg1EL6OA9St
 title: Root
 desc: ''
-updated: 1639763415274
+updated: 1643049875521
 created: 1639763368541
 ---
-# Welcome to Dendron
+# Welcome to Richard Notes
 
-This is Richard Landingpage
+Collection of several different notes, related to classes, research, websites, apps and any other type of information I find useful.
+
+
+
+
+## Expectations:
+
+> This site may contain many grammar errors and other language problems. Since this site is mostly to keep as notes in several topics I do not which to forget or to have faster access to that specific information.
+
+> Everything here is opinion based, or has been taking from several sources **Which may or may not be trusted**
+
+> Hopefully as my notes increase it will be helpful to me in the future or someone else. 
+
+> There is not specific order to the documentation included in this site either.
+
+
 
 ## Lookup
 
 This section contains useful links to related resources.
 
-- [Getting Started Guide](https://link.dendron.so/6b25)
-- [Discord](https://link.dendron.so/6b23)
-- [Home Page](https://wiki.dendron.so/)
-- [Github](https://link.dendron.so/6b24)
-- [Developer Docs](https://docs.dendron.so/)
+- [Home Page](https://www.richardhg.com/)
+- [Github](https://https://github.com/RHG101997)
+- [About Me](https://tools.richardhg.com/about/)
