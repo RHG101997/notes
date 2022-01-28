@@ -2,7 +2,11 @@
 id: n3oQ8wprzuusO1bnzmjoM
 title: Review-Notes
 desc: ''
+<<<<<<< HEAD
+updated: 1642783774610
+=======
 updated: 1643048999057
+>>>>>>> ad622e6d0c12379a63a9341648f65285b343e12a
 created: 1641570990433
 ---
 
@@ -113,6 +117,25 @@ Many cases, experiments are not enough:
 * Readers should not have to wor.
 
 If paper is not readable  as an argument.
+
+
+## Review Oscar and Ameht
+
+Side attack: 
+
+How do they evaluate it?
+
+RElated work novelty: new work
+
+Approach: Analysis and mitigation to attack
+
+Probabilistic approach
+
+### Public Comments (1 page)
+
+Summary
+
+Concerns with papers
 
 
 
