@@ -2,7 +2,7 @@
 id: O41aCFwMlJ1ZZ4PozzDuV
 title: Papers-Types
 desc: ''
-updated: 1643155341615
+updated: 1643240934412
 created: 1643147232355
 ---
 
@@ -27,8 +27,6 @@ It is important that you understand the different types of conference papers. De
 * **SOK**: papers that evaluate, systematize, and contextualize existing knowledge, as such papers can provide a high value to our community.
 
 **Applied research**: This article describes challenges and practical solutions for topics within the journal’s scope. Quantitative results for validation of the approach are expected.
-
-
 
 
 
