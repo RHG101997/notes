@@ -2,7 +2,7 @@
 id: o3XAgybLAJzQd85ehWJH0
 title: MPC
 desc: ''
-updated: 1643402015121
+updated: 1643500418737
 created: 1643396150975
 ---
 
@@ -11,14 +11,20 @@ created: 1643396150975
 
 **Secure multi-party computation (SMPC)** is a cryptographic technique that allows multiple people to compute a function, where the function itself and its outputs are public, but the inputs are kept private to each person.
 
-Terms:
+Protocols: 
 
-* Threshold secret sharing
-* Oblivious Transafer(OT)
-* Private Set Intersection(PSI)
+* **Threshold secret sharing**
+* **Oblivious Transafer(OT)** allow two parties to transfer two encrypted messages from one party to the next in a way that ensures the messages were sent and received, but the sender doesn't know which one of the messages the receiver chose to open.
+* **Private Set Intersection(PSI)**
+* **Garbled Boolean circuits** are encrypted versions of digital logic circuits, consisting of hardware or programmed wires and logic gates that follow a prescribed logic when computing a function. To “garble” the circuit means encrypting the possible input combinations and possible outputs, described in the so-called truth tables at the logic gates. Then, each logic gate outputs cryptographic keys used to unlock the output of the next gate, a process set forth until arriving at the final result.
+* **Shamir's secret sharing**, data (for example, personal data or a machine learning model) is split up into fragments, which in themselves do not contain any usable information. The secret shares are distributed amongst a set of parties to perform secure computation over the shares, releasing output to a designated party once done.
+
+To elevate the privacy posture and cover more use cases, MPC is often combined with federated learning, homomorphic encryption and differential privacy.
+
 
 
 Reference: 
+* [Multiparty computation as supplementary measure and potential data anonymization tool](https://iapp.org/news/a/multiparty-computation-as-supplementary-measure-and-potential-data-anonymization-tool/)
 * [A Pragmatic Introduction to Secure Multi-Party Computation](https://www.cs.virginia.edu/~evans/pragmaticmpc/pragmaticmpc.pdf)
 * [Out of the Box, Blockchain Powered Verifiable PPC Framework](https://deltampc.com/en)
 ### Private Set Intersection(PSI)
