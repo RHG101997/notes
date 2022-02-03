@@ -2,7 +2,7 @@
 id: 2c2ma0eGryXI9CFysgqd4
 title: Notes
 desc: ''
-updated: 1643049912312
+updated: 1643906628562
 created: 1642696041361
 ---
 
@@ -41,6 +41,38 @@ Challenges OF Wireless Computing:
     1. Wireless Communication
     2. Mobility
     3. Poor REsources dure to Portability
+
+
+### Week 3
+
+70% traffic is wireless in the internet
+
+#### Wireless Challenges
+
+1. limited transmission: 10m - 500m
+2. Mosly Limited Bandwith: 
+3. Disconnections: Network partition and stall all application.
+4. Security: Easy to intrude in the network
+5. Heterogeneous devices and network connections.
+    * wired links
+    * Outdoor: Radio
+    * Indoor: Infrared
+    * Rural Areas: Satellites
+
+> HW: Measure the data RATE and which standard, cable provider
+
+RG-6 100 MBps
+
+Wireless enviroment is not deterministic  or stocastich(performance degragation)
+
+Context-Aware systems: Depends on the context the behavior will change.
+
+Active Network: Aggressive networking
+
+**Important:** steps of evolution
+
+
+
 
 
 
