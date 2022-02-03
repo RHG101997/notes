@@ -13,7 +13,7 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: true
-    title: Dendron
+    title: Richard Notes
     description: Personal knowledge space
     siteLastModified: true
     gh_edit_branch: main
