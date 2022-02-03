@@ -2,7 +2,7 @@
 id: 2c2ma0eGryXI9CFysgqd4
 title: Notes
 desc: ''
-updated: 1643906628562
+updated: 1643914639307
 created: 1642696041361
 ---
 
@@ -67,12 +67,40 @@ Wireless enviroment is not deterministic  or stocastich(performance degragation)
 
 Context-Aware systems: Depends on the context the behavior will change.
 
+
+
+
+#### From QUiz:
+
 Active Network: Aggressive networking
 
-**Important:** steps of evolution
+* **Important:** steps of evolution
+
+* Iot is subset of CPS(Cyber-physical systems): False
 
 
+### Week 3
 
+#### What is Network
+
+* Componets
+* Inter - connecting multiple networks
+* Intra - Within something
+* Core - Medium used for networks to connect(Beltway)
+* ISP - connect regions
+* Miami ISP 
+* Protocol - Semantics, timing, syntax
+
+* Current model of the internet of Client-Server
+
+* Peer-to-Peer: Bittorrent
+* Wep3.0
+
+#### Protocol 
+
+OSI - Official
+TCP/IP - Defacto(Everyone uses it but is not official)
+SMPT - Simple mail transfer protocol
 
 
 
