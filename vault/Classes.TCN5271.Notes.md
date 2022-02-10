@@ -67,9 +67,6 @@ Wireless enviroment is not deterministic  or stocastich(performance degragation)
 
 Context-Aware systems: Depends on the context the behavior will change.
 
-
-
-
 #### From QUiz:
 
 Active Network: Aggressive networking
@@ -78,8 +75,7 @@ Active Network: Aggressive networking
 
 * Iot is subset of CPS(Cyber-physical systems): False
 
-
-### Week 3
+### Week 4
 
 #### What is Network
 
@@ -88,7 +84,7 @@ Active Network: Aggressive networking
 * Intra - Within something
 * Core - Medium used for networks to connect(Beltway)
 * ISP - connect regions
-* Miami ISP 
+* Miami ISP
 * Protocol - Semantics, timing, syntax
 
 * Current model of the internet of Client-Server
@@ -96,19 +92,36 @@ Active Network: Aggressive networking
 * Peer-to-Peer: Bittorrent
 * Wep3.0
 
-#### Protocol 
+#### Protocol
 
 OSI - Official
 TCP/IP - Defacto(Everyone uses it but is not official)
 SMPT - Simple mail transfer protocol
 
+### Week 5
 
+> Important: Slide 29 (Layer Description) - OverviewNetworking-1
 
+Ethernet std. (20-30) revisions
 
+1. **Data link:** responsability of transferring datagram from one node to adjacent node over a link.
+    * Services: Framing, reliable delivery, flow control(pacing), **error detection, error correction**, Half duplex, full duplex.
+    * MAC medium access control -> channel partition, random access, taking turn
+    * CSMA - Carrier Snese Multiple Access
+        * Propagation delay: Time it takes signal to spread over a share medium.
+        * Transmission delay: Time it takes to put data into the share medium.
+    * CSMA/CA(Collition avoidance) - WiFi, wireless technology
+    * CSMA/CD (Collition Detection) - Ethernet
+    * CRC: Cyclic Redundancy Check
+    * ARP: Helps finding link layer address
 
+2. **Network(Routing) layer**: Helps routing from network to network, not end-to-end
+    * Forwarding: passing interface to interface  in router itself.
+    * Routing: detrmine route taken , from source to destination
+    * Routing algorithms: finds least cost path
+        * Global or decentralized  / Static or dynamic
+        * Dijkstra's algorithm(centralized)
+        * Distance Vector (Decentralized)
+        * Routing Portocols: RIP, OSPF, BGP, EIGRP and IS-IS.
 
-
-
-
-
-
+3. **Transaport layer:** end-end(E2E), port numbers
