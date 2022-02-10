@@ -2,7 +2,7 @@
 id: 2c2ma0eGryXI9CFysgqd4
 title: Notes
 desc: ''
-updated: 1643914639307
+updated: 1644524524983
 created: 1642696041361
 ---
 
@@ -101,7 +101,7 @@ SMPT - Simple mail transfer protocol
 ### Week 5
 
 > Important: Slide 29 (Layer Description) - OverviewNetworking-1
-
+> Ethernet: today is star topology
 Ethernet std. (20-30) revisions
 
 1. **Data link:** responsability of transferring datagram from one node to adjacent node over a link.
@@ -125,3 +125,4 @@ Ethernet std. (20-30) revisions
         * Routing Portocols: RIP, OSPF, BGP, EIGRP and IS-IS.
 
 3. **Transaport layer:** end-end(E2E), port numbers
+    * System ports or Well-know: 0-1023
