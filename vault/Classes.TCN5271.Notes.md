@@ -2,7 +2,7 @@
 id: 2c2ma0eGryXI9CFysgqd4
 title: Notes
 desc: ''
-updated: 1644524524983
+updated: 1645035812653
 created: 1642696041361
 ---
 
@@ -126,3 +126,36 @@ Ethernet std. (20-30) revisions
 
 3. **Transaport layer:** end-end(E2E), port numbers
     * System ports or Well-know: 0-1023
+
+
+### HW 1
+
+1. (9pts) Provide names and brief descriptions for one protocol at MAC, network and application layers which are specifically designed for Internet-of-Things.
+
+    **MAC Layer:** LoRaWAN is a Access Contorl (MAC) protocol used for wide area network, which it is used in conjuction with LoRa to transamit signals for very large distances in the magnitude of miles. The difference betweem LoRa and LoRaWAN is that like we specified before LoRa is a methods of  transmisttin signals which makes it a layer 1 on the OSI model, while LoRaWAN is the protocol used for point to point communication which is a layer 2 protocol.
+
+    **Network Layer**: CARP (Channel-Aware Routing Protocol) 
+
+    **Application Layer:** Message Queuing Telemetry Transport (MQTT) works on top of TCP/IP layer, it was design to be used on low power consumption devices and helps with unreliable communcation in networks. It uses a subscriber, pusblisher and broker model
+
+
+2. (12pts) Describe the following: Propagation Delay, Transmission Delay, Queuing Delay, and Throughput. 
+
+
+
+3. (12pts) Discuss the difference between Internet-of-Things, Wireless Sensor Networks and Cyberphysical Systems.
+
+4. (12pts) In CSMA/CD, after the fifth collision, what is the probability that a node chooses K = 3? The result K = 3 corresponds to a delay of how many seconds on a
+10 Mbps Ethernet?
+
+5. (12pts) Explain the process for how MAC addresses are created by IEEE and assigned to physical devices.
+
+6. (12pts) Compare IPv4 and IPv6 headers in terms of fields and bit size. And then find out what is the percentage of routers on Internet core which still does not support
+IPv6.
+
+7. (12pts) What is the difference between ”source routing” and ”distance vector” routing? Explain your answer.
+
+8. (12pts) Consider a broadcast channel with N nodes and a transmission rate of Rbps. Suppose the broadcast channel uses polling (with an additional polling node) for multiple access. Suppose the amount of time from when a node completes transmission until the subsequent node is permitted to transmit (that is, the polling delay) is dpoll. Suppose that within a polling round, a given node is allowed to transmit at most Q bits. What is the maximum throughput of the broadcast channel?
+
+
+9. (7pts) What is an RFC? Go to IETF web site and find the first and last RFC on TCP. List their names and RFC numbers.
