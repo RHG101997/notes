@@ -141,21 +141,106 @@ Ethernet std. (20-30) revisions
 
 2. (12pts) Describe the following: Propagation Delay, Transmission Delay, Queuing Delay, and Throughput. 
 
+    **Propagation Delay**: The delay for a signal to propagte/travel thorugh a medium, good example of this time takes for WiFi signal to move thorugh air to reach other terminal.
 
+    **Transmission Delay**: The delay for a data packet to be put into the transmission link or the physical layer.
+
+    **Queuing Delay**: This delay is results of the packet arriving to a router network interface and waiting for its turn to be forwared to the next network interface.
+
+    **Throughput**: When refering to Throughput we are refering to the amount of that successfully sent to other network interface. Normally will be measured in bits, megabytes, and gigabytes per seconds.
 
 3. (12pts) Discuss the difference between Internet-of-Things, Wireless Sensor Networks and Cyberphysical Systems.
+
+    **Internet-of-Things:** 
+    **Wireless Sensor Networks:**
+    **Cyberphysical Systems:**
+
 
 4. (12pts) In CSMA/CD, after the fifth collision, what is the probability that a node chooses K = 3? The result K = 3 corresponds to a delay of how many seconds on a
 10 Mbps Ethernet?
 
+https://gateoverflow.in/132269/Networking-kurose-ross
+
 5. (12pts) Explain the process for how MAC addresses are created by IEEE and assigned to physical devices.
+
+
+
 
 6. (12pts) Compare IPv4 and IPv6 headers in terms of fields and bit size. And then find out what is the percentage of routers on Internet core which still does not support
 IPv6.
 
+
+
 7. (12pts) What is the difference between ”source routing” and ”distance vector” routing? Explain your answer.
+
+
 
 8. (12pts) Consider a broadcast channel with N nodes and a transmission rate of Rbps. Suppose the broadcast channel uses polling (with an additional polling node) for multiple access. Suppose the amount of time from when a node completes transmission until the subsequent node is permitted to transmit (that is, the polling delay) is dpoll. Suppose that within a polling round, a given node is allowed to transmit at most Q bits. What is the maximum throughput of the broadcast channel?
 
 
+
+
 9. (7pts) What is an RFC? Go to IETF web site and find the first and last RFC on TCP. List their names and RFC numbers.
+
+
+
+### Week 6
+
+#### Quiz 2 
+
+Full Mesh: every node is connected to every node
+
+#### Layer 1
+* Transmission Fundementals
+    * Relaying Information: Electrogmagnetic Signal
+    * Signal:
+        * Function of time
+        * 3 Componets: Amplitude, frequency, Phase
+        * Sine wave
+        * Analog(no breaks in the signal or continuos) or Digital(discrete signal intensity)
+        * Wavelength: distance ocuppied by 1 cycle
+    * Effects of Signal:
+        * Attenuation: lose power, lower amplitude
+        * Distortion: Interference  of defferent frequencies components
+        * Noise: The absence of signal, there is random mix of frquencies on the channel called noise.
+        * Error: When combined with noise, can lead to bits been changed causing an error.
+    * Spectrum: range of frequencies a signal contains
+    * Bandwidth: Width of the scpectrum, increasing the bandwith makes the wave look more like a square
+        * Increasing bandwith reduce distortion.
+    * Channel Capacity: Maximun rate at which data can be transmited over a given path.
+    * **important** SNR: (Signal Nooise Ratio) Signal/Noise Power (represented by decibels)
+        * SNR = 10log10(signal.pow/noise.pow)
+    * Digitial signals can only propagate thorugh wired mediums. So we need to convert Digital-to-analog.   
+    * Modem: modulator, demodulator
+    * Encoding(Modulation of analog to digital):
+        1. ASK Amplitude shift keying
+        2. FSK Frequency shift keying
+        3. PSK Phase shift keying
+
+    * Analog to digital
+        * Modulation will help to provide frequency devision multiplexing
+        * AM Amplitude Modulation
+        * FM Frequency Modulation
+        * PM Phase Modulation
+    * Digitization: convert analog data into digital signals (slide 12)
+        * Pulse Code Modulation (PCM)
+        * Delata Modulation (DM)
+    * Multiplexing
+        * Carrying multiple signals in one medium
+        * FDM Frequency Devision Multiplexing
+        * TDM Time Devision Multiplexing
+    * Transmission Media for Signals
+        * Guided media: Solid media such as copper, optical fiber, etc.
+        * Unquided: Atmosphere, outer space: Wireless transmission
+    * General Frequency Ranges:
+        * UHF Ultra high frequency
+    * FCC Federal Communication Commission
+        * Regulate the interstate and international communications.
+        * Prevent interferences between different devices.
+        * Spectrum Allocation
+    
+    
+
+    
+
+    
