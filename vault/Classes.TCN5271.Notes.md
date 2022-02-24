@@ -191,7 +191,7 @@ IPv6.
 Full Mesh: every node is connected to every node
 
 #### Layer 1
-* Transmission Fundementals
+1. Transmission Fundementals
     * Relaying Information: Electrogmagnetic Signal
     * Signal:
         * Function of time
@@ -201,13 +201,13 @@ Full Mesh: every node is connected to every node
         * Wavelength: distance ocuppied by 1 cycle
     * Effects of Signal:
         * Attenuation: lose power, lower amplitude
-        * Distortion: Interference  of defferent frequencies components
+        * Distortion: Interference  of defferent frequencies components(Interference: Block the path of, disruption.)
         * Noise: The absence of signal, there is random mix of frquencies on the channel called noise.
         * Error: When combined with noise, can lead to bits been changed causing an error.
     * Spectrum: range of frequencies a signal contains
     * Bandwidth: Width of the scpectrum, increasing the bandwith makes the wave look more like a square
         * Increasing bandwith reduce distortion.
-    * Channel Capacity: Maximun rate at which data can be transmited over a given path.
+    * Channel Capacity: Maximun rate at which data can be transmited over a given path.(C=2B log(M)) B = Bandwith, M = Voltage levels, C = Channel capacity
     * **important** SNR: (Signal Nooise Ratio) Signal/Noise Power (represented by decibels)
         * SNR = 10log10(signal.pow/noise.pow)
     * Digitial signals can only propagate thorugh wired mediums. So we need to convert Digital-to-analog.   
@@ -216,6 +216,8 @@ Full Mesh: every node is connected to every node
         1. ASK Amplitude shift keying
         2. FSK Frequency shift keying
         3. PSK Phase shift keying
+    
+    > QAM: modulation technique
 
     * Analog to digital
         * Modulation will help to provide frequency devision multiplexing
@@ -238,9 +240,115 @@ Full Mesh: every node is connected to every node
         * Regulate the interstate and international communications.
         * Prevent interferences between different devices.
         * Spectrum Allocation
-    
-    
 
-    
 
+2. Radio Basics:(RF)
+    * Radio Waves
+        * 3KHz to 300 GHz
+        * Easy to generate
+        * Penetrate buildings
+        * Omnidirectional
+    * All signals are converted to analog
+    * Antenas:
+        * Electrical conductor(radiates/transmits) electromagnetic waves into space
+        * Radiation Pattern of an Antenna
+            * Radiates in all direction(ideal case)
+            * ISOTROPIC(Omni-directinl radiation pattern in 3D) - sun is the best example
+            * Real antennas are not isotropic
+            * Usually in 2D donut
+            * Dipoles (half-wave) and Quarter wave dipoles
+    * Directional Antenneas
+        * Directional are very common, often based on stations
+        * Beam width: measure of directivity antenna
+        * Antenna gain: Power output, in a particular direction, compared to pefect omnidirectional.(measure in dBi) ![antenas dBi](https://www.ahsystems.com/EMC-formulas-equations/images/Antenna-gain-dBi.png)
+        * Types Examples: Isotropic, Omni DIrectional, Yagi Dish.
+    * Radio Propagation
+        ![Radio Propagation](https://image.slidesharecdn.com/lectureu1u2wirelesstransmission-151115072403-lva1-app6892/85/wireless-transmission-12-320.jpg?cb=1447572373)
+        * Transmission Range: Communication possible and low error rate.
+        * Detection range: no communication possible, detect the signal
+        * Interefence Range: signal may not be detected, adds noise from background
+    > Higher frequency travel less
+    * Propagation: 
+        * Ground wave: Freq: 2MHz, contour  of earth, AM Radio
+        ![ground wave pro](https://7am0d.weebly.com/uploads/1/3/6/7/13675140/7432717.png?1)
+        * Sky Wave: Travel thousans of kilometers, reflected from ionessphere and earth's surface, Military Comm
+        ![Sky wave pro](https://7am0d.weebly.com/uploads/1/3/6/7/13675140/1701360.png?1)
+        * Line of Sight: Freq: 30MHz 
+        ![Line of Sight(LOS)](https://7am0d.weebly.com/uploads/1/3/6/7/13675140/8792977.png?1)
+    * Impairments in LOS Transamission:
+        * The signal recieved is different the signal transmitted.
+        * Coomon Imparments: noise, thermal noise, free space loss, multipath propagation, fading, Reflection, Scattering, Shadowing, Diffraction
+        * Reeiving power of he signasl depends on these  factors.
+    > Important
+    * Fading: Varaition of recieved signal power caused by changes in the medium or path.
+         * Causes: Free sapce loss, multipath propagation(reflection,scattering, ...), mobility, atmospheric absorption, interference.
+         * Mobile envrioments creates more complex effects.
     
+    * Free Space Loss: Any type of signal disperses with the distance as signal is being spread over larger and larger area.
+        * Equation: ![](https://www.radartutorial.eu/01.basics/formel/rb55(3).print.png)
+        * K*1/f^2d^2
+    * Multipath Propagation:
+        * Reflection: signal encounters a surface that is large relative to wavelength of the signal
+        * Scattering: Incoming signal hits an object whose size in the order of the wavelength if signal or less.
+        * Diffraction: edge of impenetrable body that is large enough  compared to the wavelength
+        * Refraction: Bending of radio waves as they propagate thorugh the atmophere.
+    * Mobility effects:
+        * As user moves, signal paths may chnage.
+        * Fast Fading (ends like a noise, move half the wavelenght) and slow fading(move larger that wavelegnth)
+        ![Fast and slow fading](https://www.rfwireless-world.com/images/fast-fading-vs-slow-fading.jpg)
+    * Spread Spectrum(transmit in wider freq.)
+        * Motivation : wider bands the signals can be wiped out.
+        * Solution: wider bandwidth, transmit many different frequencies.
+        * Initial Motive: Prevent jamming for military applications
+        * Used in every wireless networks today. Multiple transmitters can transmit at the same freq range.
+    * Frequency Hopping Spread Spectrum(FHSS)
+        * Multiple base freq(channels)
+        * randomlly hops to one of thoses
+        * Recviever should do the same
+        * SPreading code = Hoping Sequence
+        * Fast Hopping(several freq per bit), and slow Hopping(several bit per freq)
+            * dewll time: stick with that feq
+            * bit period: time to stay on a bit
+    * Spread code: predefine sequences
+    * Direct Sequence Spread Spectrum(DSSS) 
+        * Each bit in orginal signal  is represented by multiple bits in the transmitted signal
+        * Very resilient to interference
+        * Transmitted signal is code CHIP
+        * Multiple users can share the bandwidth, using differen chipping.
+
+3. Hardware
+    * Example: Sensor, actuators, etc
+    * Components: Sensor, IO, Controller Radio, Power unit
+    * ADC in IO = Analog to digital converter
+    * Actuation = taking a physical action
+    * Mobilizer = ability to move, flying like drones, it requires additional hardware
+    * Location finding system: GPS, or location tech
+    * Requirements of the application are design decision(size, energy, cost, sensors/actors)
+    * Controller:
+        * Factors: # of transistors(size, cost, power), # clock cyles(power), time to develop(acceptance), nonreccurring enginerring cost (NRE)(cost, acceptance)
+        * Ideal minimize all factors at the same times.
+        * CPU: Central Proccessing Unit of the device
+        * Different architectures:
+            * Mircocontroller(MCU): resource contranted, sofware controlled, general purpose
+            * Digital Proccessor(DSP): Proccess large data streams, parallelizing.
+            * Field-Proggrammble Gate Arrays(FPGA): Special harware, expensive, limited configuration
+            * Application-Specfific Integrated Circuits(ASIC): Special hardware designed only for one application, possible embedding several MCU or DSP cores. 
+        * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+To be Continued
+
