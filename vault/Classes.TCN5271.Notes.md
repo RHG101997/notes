@@ -362,8 +362,11 @@ Full Mesh: every node is connected to every node
     * CSMA/CA with ACK
     * Wifi solution to exposed and hidden terminal is RTS(Request to send) and CTS(Clear to send)  Virtual Carrier Sensing
     * RTS 20 bytes and CTS 16 bytes
-    * 
-
+    * Contention Window (CW) wait for to be idle to send from 0 to CW
+    * _Important_ You require ACK cz cant detect collision 
+    * Channel Assigment and Regiistration:
+        * Roaming: moving from access point to others. Re-Association
+    * Other issures: Fragmentation, Synchronization, Power Management, QoS for Voice Packets
 
 
 
