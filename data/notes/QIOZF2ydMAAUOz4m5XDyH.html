@@ -1,0 +1,16 @@
+<h1 id="raspberrypi"><a aria-hidden="true" class="anchor-heading" href="#raspberrypi"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RaspberryPi</h1>
+<h4 id="check-temperature"><a aria-hidden="true" class="anchor-heading" href="#check-temperature"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Check Temperature</h4>
+<p>Temperature on Raspberry PI GPU can be obtain by:</p>
+<pre class="language-bash"><code class="language-bash">
+    <span class="token comment">#!/bin/bash</span>
+    <span class="token comment"># Script: my-pi-temp.sh</span>
+    <span class="token comment"># Purpose: Display the ARM CPU and GPU  temperature of Raspberry Pi 2/3 </span>
+    <span class="token comment"># Author: Vivek Gite &#x3C;www.cyberciti.biz> under GPL v2.x+</span>
+    <span class="token comment"># -------------------------------------------------------</span>
+    <span class="token assign-left variable">cpu</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token operator">&#x3C;</span>/sys/class/thermal/thermal_zone0/temp<span class="token variable">)</span></span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span><span class="token variable">)</span></span> @ <span class="token variable"><span class="token variable">$(</span><span class="token function">hostname</span><span class="token variable">)</span></span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"-------------------------------------------"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"GPU => <span class="token variable"><span class="token variable">$(</span>/opt/vc/bin/vcgencmd measure_temp<span class="token variable">)</span></span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"CPU => <span class="token variable"><span class="token variable">$((</span>cpu<span class="token operator">/</span><span class="token number">1000</span><span class="token variable">))</span></span>'C"</span>
+
+</code></pre>

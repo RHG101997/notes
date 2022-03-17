@@ -1,0 +1,763 @@
+<h1 id="notes"><a aria-hidden="true" class="anchor-heading" href="#notes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Notes</h1>
+<h1 id="eel-6787-network-security"><a aria-hidden="true" class="anchor-heading" href="#eel-6787-network-security"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>EEL 6787 Network Security</h1>
+<h2 id="chapter-8-intrusion-dection"><a aria-hidden="true" class="anchor-heading" href="#chapter-8-intrusion-dection"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Chapter 8 Intrusion Dection</h2>
+<h4 id="types"><a aria-hidden="true" class="anchor-heading" href="#types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Types:</h4>
+<ul>
+<li>Cybercriminals: hackers, cracker, organized groups for money, identity theft, credentials, etc</li>
+<li>Activist: Motivated social polictica issue, DoS attacks, theft, negative publicity.</li>
+<li>State sponsored organization: hackers sponsored by government for (APT)</li>
+<li>Others: other motivations</li>
+<li>Apprentice: use toolkits</li>
+<li>Journeyman: Modify and extend attack  toolkits</li>
+</ul>
+<blockquote>
+<p>Examples of Intrusion: defacing webserver, copying database, sniffing to capture credentials,  posing, etc</p>
+</blockquote>
+<h4 id="intruder-behavior"><a aria-hidden="true" class="anchor-heading" href="#intruder-behavior"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Intruder behavior</h4>
+<ul>
+<li><strong>Target Acquisition and Information gathering:</strong>  public,technical, network exploration</li>
+<li><strong>Intial Access</strong>: remote vulnerabilities, guess passwords, malware isntallation</li>
+<li><strong>Privilage Escalation</strong>: local root access</li>
+<li><strong>Information Gathering or System Exploit</strong>: scan files, transafer data outside</li>
+<li><strong>Maintaining Access</strong>: installation backdoor</li>
+<li><strong>Covering Tracks</strong>: desible logs, hide files</li>
+</ul>
+<p><strong>Security Intrusion</strong> event when intruder gets access or attemps.</p>
+<h3 id="intrusion-detection-systemids"><a aria-hidden="true" class="anchor-heading" href="#intrusion-detection-systemids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Intrusion Detection System(IDS)</h3>
+<h4 id="3-logical-componets"><a aria-hidden="true" class="anchor-heading" href="#3-logical-componets"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>3 logical Componets:</h4>
+<ol>
+<li>Sensors: data collection</li>
+<li>Analyser: out if intrusion</li>
+<li>User Interface: output, control</li>
+</ol>
+<h4 id="location-of-ids"><a aria-hidden="true" class="anchor-heading" href="#location-of-ids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Location of IDS:</h4>
+<ol>
+<li>Host-Based IDS(HIDS): single host</li>
+<li>Network-Based IDS(NIDS): network segments, tarffic</li>
+<li>Distrubuted or hybrid IDS: combines both, central analyser, multiple sensors</li>
+</ol>
+<h4 id="threads-types"><a aria-hidden="true" class="anchor-heading" href="#threads-types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Threads types:</h4>
+<ol>
+<li>Masquerader: false identity</li>
+<li>Misfeasor: legit user, not authorized</li>
+<li>Clandestine user: covering action by delteting logs</li>
+<li>Port Scans: inforamtion gathering for TCP connections</li>
+<li>DoS attacks</li>
+<li>Malware Attacks</li>
+<li>ARP spoofing</li>
+<li>DNS cashe poisoning: changing DNS cache</li>
+</ol>
+<h4 id="ids-componets"><a aria-hidden="true" class="anchor-heading" href="#ids-componets"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>IDS Componets:</h4>
+<ul>
+<li>IDS manager: compiles data to detect intrusion , determination based on site policies. Detects and sound Alarm</li>
+</ul>
+<h4 id="ids-requirements"><a aria-hidden="true" class="anchor-heading" href="#ids-requirements"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>IDS Requirements</h4>
+<ol>
+<li>Run continually</li>
+<li>Fault tolerant</li>
+<li>Resist subversion</li>
+<li>Impose a minimun overhead</li>
+<li>Configure accourding to policies</li>
+<li>Scale</li>
+<li>Degradation Services</li>
+<li>Allow Dynamic re-configuration</li>
+</ol>
+<h4 id="analysis-approach"><a aria-hidden="true" class="anchor-heading" href="#analysis-approach"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Analysis Approach</h4>
+<ul>
+<li><strong>Anomaly Detection</strong>: whether behavior is legit or intruder. Done by collecting data of legit user. Classification Approach for Detection:</li>
+</ul>
+<ol>
+<li>Statistical: analysis of univariate, multivariate, or time-series model.</li>
+<li>Knowledge base: by observed behavior accourding to set of rules</li>
+<li>Machine Learning: automatic based on traning data</li>
+</ol>
+<ul>
+<li><strong>Signature/Heuristic Detection</strong>: Malicious data patterns or attack rules and compared to current behavior. Approaches:</li>
+</ul>
+<ol>
+<li>Match large colletion of know patterns agasint traffic</li>
+<li>Signatures need to be large to decrease false alarms rate, still detect large fraction of malicious data.</li>
+<li>Anti-virus, network scanning proxies or NIDS.</li>
+</ol>
+<ul>
+<li><strong>Rule-based Heuristic Identification</strong>: </li>
+</ul>
+<ol>
+<li>Use rules identify know exploits</li>
+<li>rules used are specific</li>
+<li>Rules for Identify suspicious behavior</li>
+</ol>
+<h4 id="base-rate-fallacy"><a aria-hidden="true" class="anchor-heading" href="#base-rate-fallacy"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Base-Rate Fallacy</h4>
+<blockquote>
+<p>base-rate fallacy: probability of some conditional event is assessed without considering the "base rate" of that event
+IDS needs to: most intrusion with few false alarms.</p>
+<ul>
+<li>to few intrusion -> false security</li>
+<li>to many false alarms -> waste of time</li>
+</ul>
+</blockquote>
+<h3 id="host-based-intrusion-detection-hids"><a aria-hidden="true" class="anchor-heading" href="#host-based-intrusion-detection-hids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Host-Based Intrusion Detection (HIDS)</h3>
+<ul>
+<li>Monitor activity </li>
+<li>Halt attacks before damage is done</li>
+<li>Detect internal and external Intrusion</li>
+</ul>
+<h4 id="sensors-of-hids"><a aria-hidden="true" class="anchor-heading" href="#sensors-of-hids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sensors of HIDS:</h4>
+<ol>
+<li>System call traces</li>
+<li>Audit(log): user activity</li>
+<li>File integrity checksums: (difficult to monitor files, and need generate checksum for every file)</li>
+<li>Registry access</li>
+</ol>
+<h3 id="network-based-intrusion-detection-nids"><a aria-hidden="true" class="anchor-heading" href="#network-based-intrusion-detection-nids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Network-based Intrusion Detection (NIDS)</h3>
+<ul>
+<li>Monitor traffic selected points</li>
+<li>Traffic packet examination in real time</li>
+<li>Examine Protocol Activities</li>
+<li>Analysis of traffic patterns by sensors or both</li>
+</ul>
+<h4 id="sensors-in-nids"><a aria-hidden="true" class="anchor-heading" href="#sensors-in-nids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sensors in NIDS</h4>
+<p>They can be deployed in two mode:</p>
+<ol>
+<li>Inline: traffic most pass through the sensor</li>
+<li>Passive: monitos a copy of the traffic</li>
+</ol>
+<h3 id="stateful-protocol-analysisspa"><a aria-hidden="true" class="anchor-heading" href="#stateful-protocol-analysisspa"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stateful Protocol Analysis(SPA)</h3>
+<ul>
+<li>Subset of <strong>anomaly detection</strong> compared observed vs predetermine universal vendor supplied profiles. Key disadvantage is the high resources usage it requires.</li>
+</ul>
+<h3 id="ietf-intrusion-dectection-working-group"><a aria-hidden="true" class="anchor-heading" href="#ietf-intrusion-dectection-working-group"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>IETF Intrusion Dectection Working Group</h3>
+<ul>
+<li>Define data formats and exchange procedures for sharing information.</li>
+</ul>
+<h3 id="honeypots"><a aria-hidden="true" class="anchor-heading" href="#honeypots"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Honeypots</h3>
+<ul>
+<li>System is filed with fabricated data with no value to user.</li>
+</ul>
+<ol>
+<li>Divert atacker from critical systems</li>
+<li>Collect information about attacker activity</li>
+<li>Encourage attacker to stay longer.</li>
+</ol>
+<h4 id="low-interaction-honeypots"><a aria-hidden="true" class="anchor-heading" href="#low-interaction-honeypots"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Low Interaction Honeypots:</h4>
+<ul>
+<li>Emulate an IT service or system, but doesn't execute full version.</li>
+<li>Less realistic Target</li>
+<li>Sufficient as componet of IDS to warn of attack</li>
+</ul>
+<h4 id="high-interaction-honeypots"><a aria-hidden="true" class="anchor-heading" href="#high-interaction-honeypots"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>High Interaction Honeypots:</h4>
+<ul>
+<li>Real system, full OS with services and app</li>
+<li>Realistic target</li>
+<li>Use more resources </li>
+<li>If compromised can be use to attack the system</li>
+</ul>
+<h4 id="honeypots-locations"><a aria-hidden="true" class="anchor-heading" href="#honeypots-locations"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Honeypots Locations</h4>
+<ul>
+<li>Outside the external Firewall: tracks attemps to connect to IP within scope fo network. Reduces the alerts issued by firewall and internal IDS. Disadvantages little ability to trap internal attacker, mainly if firewall blocks traffci both directions.</li>
+<li>Network of externally avaible services(email, web) called DMS(<code>Demilitarized zone</code>) other systems are secure by the activity generated by the Honeypot. Disadvantage DMZ not fully accessible, firewall blocks traffic from DMZ and unneed services. Solution Opening up firewall but increase risk of attack.</li>
+<li>Fully internal, which can catch internal attacks and Detects misconfigured firewalls. Disadvantage if compromised can attack internal system. Also configuring firewall to allow traffic to honeypot potentially increasing risk, and configuration mistakes.</li>
+</ul>
+<h3 id="snort"><a aria-hidden="true" class="anchor-heading" href="#snort"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Snort</h3>
+<p>Open source, configurable, protable host-or-network based IDS.Lightweight. Perform real time package analysis can capture, also content matching:</p>
+<ul>
+<li>Easy to deploy</li>
+<li>Efficient operation</li>
+<li>Easy configure</li>
+</ul>
+<p>Intallation consist of 4 logical components:</p>
+<ol>
+<li>Packet decoder</li>
+<li>Detection engine</li>
+<li>Logger </li>
+<li>? <strong>Search later</strong></li>
+</ol>
+<h2 id="chapter-9-firewalls-and-intrustion-prevention-systems"><a aria-hidden="true" class="anchor-heading" href="#chapter-9-firewalls-and-intrustion-prevention-systems"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Chapter 9 Firewalls and Intrustion Prevention Systems</h2>
+<h3 id="firewalls"><a aria-hidden="true" class="anchor-heading" href="#firewalls"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Firewalls</h3>
+<p><strong>Firewall</strong>: prevent access of unauthorized electronics to networks.</p>
+<h4 id="design-goals"><a aria-hidden="true" class="anchor-heading" href="#design-goals"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Design Goals:</h4>
+<ol>
+<li>All traffic must pass thorugh it, physically blocking all access</li>
+<li>Authorized traffic define by local policy.</li>
+<li>Imune to penetration.</li>
+</ol>
+<h4 id="firewall-policies"><a aria-hidden="true" class="anchor-heading" href="#firewall-policies"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Firewall Policies</h4>
+<p>Filter incoming and outgoing traffic based on set of rules. types of traffic, address ranges, protocols, application, and content type</p>
+<h4 id="policy-action"><a aria-hidden="true" class="anchor-heading" href="#policy-action"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Policy Action:</h4>
+<ol>
+<li>Accept: allow pass</li>
+<li>Dropped: not allow, no alarm</li>
+<li>Rejected: not allow, sound alarm</li>
+</ol>
+<h4 id="approuches-for-firewall"><a aria-hidden="true" class="anchor-heading" href="#approuches-for-firewall"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Approuches for firewall</h4>
+<ul>
+<li>Blacklist: all package allowed except from one on list</li>
+<li>Whitelist: (default) all packages blocked except the one on list</li>
+</ul>
+<h4 id="firewall-filter-characteristics"><a aria-hidden="true" class="anchor-heading" href="#firewall-filter-characteristics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Firewall Filter Characteristics</h4>
+<ol>
+<li>IP address and protocol values</li>
+<li>Apllication Protocol</li>
+<li>User identity</li>
+<li>Network activity</li>
+</ol>
+<h4 id="firewall-capabilities-and-limits"><a aria-hidden="true" class="anchor-heading" href="#firewall-capabilities-and-limits"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Firewall Capabilities and Limits</h4>
+<ol>
+<li>Single choke point</li>
+<li>location for monitoring security related events</li>
+<li>IPsec, tunnel mode to implement VPN</li>
+<li>Can't protect agasint attack that bypass firewall</li>
+<li>May not protect agaisnt internal attacks</li>
+<li>Can't guard agaisnt misconfigured wireless LAN</li>
+<li>Inffected devices can infect the network</li>
+</ol>
+<h4 id="firewall-type"><a aria-hidden="true" class="anchor-heading" href="#firewall-type"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Firewall Type:</h4>
+<ol>
+<li>Packet filter(<strong>Stateless</strong>): matches  a set of rules.</li>
+<li><strong>Statefull</strong> filters: records all connection, and determine, new,existing, etc</li>
+<li>Application-proxy: inspect content of traffic, blocking what consider inappropiate</li>
+<li>Circuit Level proxy</li>
+</ol>
+<h4 id="stateless"><a aria-hidden="true" class="anchor-heading" href="#stateless"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stateless</h4>
+<ul>
+<li>Advantages of Packet Filtering: simplicity, transaparent to user, very fast.</li>
+<li>Weakness of Packet Filtering:</li>
+</ul>
+<ol>
+<li>Can't prevent application specific vulnerability</li>
+<li>Logging functionality is limited</li>
+<li>No support Advance user authentification schemes</li>
+<li>vulnerable to attacks and exploits of TCPI/IP</li>
+<li>Improper config lead to breaches</li>
+</ol>
+<p><strong>Attacks:</strong></p>
+<ol>
+<li>IP address spoofing. Counter measure-> discard packet with inside source address if arrive external</li>
+<li>Source routing attack: Countermeasure -> is to discard all packets using this option</li>
+<li>Tiny Fragments attacks: Create small packets and force TCP header into different packet fragments. Passing by the firewall rules. Countermeasure -> enforcing rule first fragment  of packet must contain predefined minimun amount of the transaport header.</li>
+</ol>
+<h4 id="statefull-inspection-firewall"><a aria-hidden="true" class="anchor-heading" href="#statefull-inspection-firewall"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Statefull Inspection Firewall</h4>
+<p>Entry for each established connection, allowing incoming traffic for those packets that fit profile, of one of the entries.</p>
+<h4 id="stateful-firewall"><a aria-hidden="true" class="anchor-heading" href="#stateful-firewall"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stateful Firewall</h4>
+<p>Tables containing  data on each active connection, ip, ports, and sequence #. It does similar to packet filter firewall but records TCP connection.</p>
+<h4 id="application-level-gateway"><a aria-hidden="true" class="anchor-heading" href="#application-level-gateway"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Application-Level Gateway</h4>
+<p>Acts as a relay of application-level traffic, User need to athentificate himself. Disadvantages is addtional proccessing overhead on each connection.</p>
+<h4 id="socks-circuit-level-gateway"><a aria-hidden="true" class="anchor-heading" href="#socks-circuit-level-gateway"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>SOCKS Circuit-Level Gateway</h4>
+<p>Client-Server applications in TCP/UDP use services of network firewall. Consist of the following components.</p>
+<ol>
+<li>SOCKS server</li>
+<li>SOCKS client library</li>
+<li>SOCKS-ified version, re-linking or re-compilation using SOCKS library to encapsulate the the library.</li>
+</ol>
+<h4 id="bastion-host"><a aria-hidden="true" class="anchor-heading" href="#bastion-host"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bastion Host</h4>
+<p>Firewall Administrator as critical strong point in security. Plataform for application or circuit gateway. Characteristics are:</p>
+<ol>
+<li>SSecure version of OS</li>
+<li>Essential installed only</li>
+<li>Additional Authentification</li>
+<li>Support from subset of protocols</li>
+<li>Configure for specific host</li>
+<li>Eac proxy loggs all traffic and duration of connection</li>
+<li>Proxy modeule is very small</li>
+<li>Proxy is independent of others</li>
+<li>Proxy requires no disk access, besides inital config</li>
+<li>Proxy runs as non-root user</li>
+</ol>
+<h4 id="host-based-firewall"><a aria-hidden="true" class="anchor-heading" href="#host-based-firewall"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Host-Based Firewall</h4>
+<p>Module comes with the OS. Advantages include:</p>
+<ol>
+<li>Custom Filtering rules</li>
+<li>Protection independent from topology</li>
+<li>Additonal layer protection</li>
+</ol>
+<blockquote>
+<p>Personal firewall: deny unauthorized remote access, monitor outgoing traffic to detect and block worms, and malware.</p>
+</blockquote>
+<h3 id="intrusion-prevention-systems-ips-idps"><a aria-hidden="true" class="anchor-heading" href="#intrusion-prevention-systems-ips-idps"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Intrusion Prevention Systems IPS (IDPS)</h3>
+<p>IPS blocks traffics but uses detection algorithms from IDS to determine when to do so. It can be Host- , Netowrk-, or hybrid.</p>
+<h4 id="host-based-ips-hips"><a aria-hidden="true" class="anchor-heading" href="#host-based-ips-hips"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Host-Based IPS (HIPS)</h4>
+<ul>
+<li>Signature: focus on content of the application network traffic, sequence, pattern, sys calls, etc</li>
+<li>Anomaly: IPS checks <strong>behavior</strong> pattern that indicate malware Ex:</li>
+</ul>
+<ol>
+<li>Modification of sys resources.</li>
+<li>Privilege escalation exploits</li>
+<li>Buffer-overflow</li>
+<li>Access contact list email</li>
+<li>Directory traversal</li>
+</ol>
+<blockquote>
+<p>A prudent approach is to use HIPS as one of elemnt in the defense.</p>
+</blockquote>
+<h4 id="network-based-ips-nips"><a aria-hidden="true" class="anchor-heading" href="#network-based-ips-nips"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Network-Based IPS (NIPS)</h4>
+<ul>
+<li>Can modify or discard TCP connections, may provide flow data protection:</li>
+</ul>
+<ol>
+<li>Pattern matching</li>
+<li>Stateful matching</li>
+<li>Protocol anomaly</li>
+<li>Traffic anomaly</li>
+<li>Statistical anomaly</li>
+</ol>
+<h4 id="digital-inmune-system"><a aria-hidden="true" class="anchor-heading" href="#digital-inmune-system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Digital Inmune System</h4>
+<p>Comprhensive defense  agasint behavior casused by malware.Its success depends on the ability of the malware analysis to detect new and innovative malware strains.</p>
+<h4 id="snort-inline"><a aria-hidden="true" class="anchor-heading" href="#snort-inline"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Snort Inline</h4>
+<p>modified version of <strong>Snort</strong>, enhancing it and providing functionality similar to a IPS. Three new rules are added:</p>
+<ol>
+<li>Drop: drop based on rule and logs</li>
+<li>Reject: rejected, logged, and error returned</li>
+<li>Sdrop: rejected but no logged</li>
+</ol>
+<h2 id="chapter-6---malicious-sofware"><a aria-hidden="true" class="anchor-heading" href="#chapter-6---malicious-sofware"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Chapter 6 - Malicious Sofware</h2>
+<ul>
+<li>Malware: A program intent of compromising confifentiallity, intergrity  or availability.</li>
+<li>Adavance Persistent Threat: cybercrime targeted to bussines or political targets.</li>
+<li>Adware: ads that integrated into sofware</li>
+<li>AttackKit: tools for generating malware. (Zeus crimeware, Angler)</li>
+<li>Auto-rooter: Break into new machines remotely</li>
+<li>Backdoor: access to unauthorized system bypasssing security(Maintenance Hook)</li>
+<li>Drive-by-Download: code that eploit browser vulnerability to attack</li>
+<li>Exploits: code specific for single or multiple vulnerabilities.</li>
+<li>Flooders: generate large volume of data, DoS</li>
+<li>Keyloggers: record credentials, keystrokes</li>
+<li>Logic Bombs: Stays dormant until triggerd by event or condition.</li>
+<li>Macro virus: scripting code attached to documents, can replicate</li>
+<li>Mobile Code: </li>
+<li>Root kit: tools after attacke is in system.</li>
+<li>Spammer programs: large volume of email</li>
+<li>Spyware: collecs information from several sources</li>
+<li>Trojan Horse: Appears useful but execute payload in back</li>
+<li>Virus: When executed replicates it self to other executables</li>
+<li>Worm: runs independent, can propagate a complete version to other host.</li>
+<li>Zombie,bot: activate when lunching an attack on other machines.</li>
+</ul>
+<h4 id="malware-classification-categories"><a aria-hidden="true" class="anchor-heading" href="#malware-classification-categories"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Malware Classification Categories</h4>
+<ol>
+<li>How it propagates</li>
+<li>Actions and Payload</li>
+<li>Aditionally</li>
+</ol>
+<ul>
+<li>Need a host program</li>
+<li>Indpendent, self-contained</li>
+<li>Don't replicate</li>
+</ul>
+<p><strong>Propagation Mechanism</strong>:</p>
+<ol>
+<li>Infection of existent content</li>
+<li>Exploit sofware vulnerabilities(worms)</li>
+<li>Social Engineering attacks.</li>
+</ol>
+<p><strong>Payload actions once in target</strong></p>
+<ol>
+<li>Corruption</li>
+<li>Theft service/make system zombie</li>
+<li>Theft of data (keylogger) </li>
+<li>Stealthing/hiding</li>
+</ol>
+<h4 id="attack-sources"><a aria-hidden="true" class="anchor-heading" href="#attack-sources"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Attack Sources</h4>
+<ol>
+<li>Politically motivated</li>
+<li>Criminals</li>
+<li>Organized Crime</li>
+<li>Organization(selling services)</li>
+<li>National Goverment Agencies</li>
+</ol>
+<h4 id="apts-characteristics"><a aria-hidden="true" class="anchor-heading" href="#apts-characteristics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>APTs Characteristics:</h4>
+<ul>
+<li>Well resouced</li>
+<li>State sponsored</li>
+<li>Advance: dev custom malware</li>
+<li>Persisten: maximize order of success</li>
+<li>Threats: increase level of thread</li>
+<li>Aim: theft, intelectual properties, security,physical disruption</li>
+<li>Techniques used: social enginerring, spear-pishing, drive-by-download, etc</li>
+<li>Intent: to infect</li>
+</ul>
+<h4 id="virus-characteristics"><a aria-hidden="true" class="anchor-heading" href="#virus-characteristics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Virus Characteristics</h4>
+<ul>
+<li>Modifies and includes a copy of the virus</li>
+<li>Replicate into other content</li>
+<li>Easly spread through networks</li>
+</ul>
+<p>Phases of Virus:</p>
+<ol>
+<li>Dormat: is idle</li>
+<li>Triggering: condition or event </li>
+<li>Propagation: copy of itself, replicates</li>
+<li>Execution: Payload or action</li>
+</ol>
+<p>Macro virus: they attack to documents or other media files:</p>
+<ul>
+<li>Plataform independent</li>
+<li>Easly spread, in traditional file systems</li>
+<li>easier to write or modify.</li>
+</ul>
+<h4 id="virus-classification"><a aria-hidden="true" class="anchor-heading" href="#virus-classification"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Virus Classification:</h4>
+<ul>
+<li><strong>By target:</strong> </li>
+</ul>
+<ol>
+<li>Boot sector infector</li>
+<li>File infector</li>
+<li>Micro virus</li>
+<li>Multipartite virus: multiple way infecting</li>
+</ol>
+<ul>
+<li><strong>By concealment</strong></li>
+</ul>
+<ol>
+<li>Encrypted</li>
+<li>Stealth</li>
+<li>Polymorphic: mutates apparence</li>
+<li>Metamorphic: mutates and rewrite himself.  apparence, and behavior</li>
+</ol>
+<h4 id="worms"><a aria-hidden="true" class="anchor-heading" href="#worms"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Worms</h4>
+<p><strong>Worm Replication:</strong></p>
+<ul>
+<li>Mail, instant msg</li>
+<li>File sharing</li>
+<li>Remote execution: execute himself in other system</li>
+<li>Remote file access or transfer capability</li>
+<li>Remote login capability</li>
+</ul>
+<p><strong>Worm Target Discovery</strong></p>
+<ul>
+<li>Scanning (Fingerprint): search system</li>
+<li>Random: Probes random IP</li>
+<li>Hit List: list of potential targets</li>
+<li>Topological: based on information on host</li>
+<li>Local subnet: own local network</li>
+</ul>
+<blockquote>
+<p>Morris Worm: 1988 UNIX systems. Exploit UNIX finger protocol, sending emails. First worm</p>
+</blockquote>
+<blockquote>
+<p>WannaCry: Ransomware,  scan networks local and random to jump other systems. Encrypts files and ask for ransom to decrypt. UK researcher activated a kill switch. </p>
+</blockquote>
+<p><strong>State of art Worm tech</strong></p>
+<ul>
+<li>Multiplataform</li>
+<li>Multi-exploit</li>
+<li>Ultrafast-spreading</li>
+<li>Polymorphic: evade detection</li>
+<li>Transport vheicales</li>
+<li>Zero-day Attack: vulnerability not jet discovered</li>
+</ul>
+<h4 id="mobile-code"><a aria-hidden="true" class="anchor-heading" href="#mobile-code"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Mobile Code</h4>
+<p>Included when running cross-site scripting, interactive and dynamic websites, download from untrusted sofware. Target smartphones, delte data. Also CommWarrior replicates using Bluetooth.</p>
+<h4 id="drive-by-download"><a aria-hidden="true" class="anchor-heading" href="#drive-by-download"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Drive by Download</h4>
+<ul>
+<li>Exploits browser vulnerabilities and plugins</li>
+<li>Doesn't actively propagates as regular worms</li>
+<li>Spreads when visiting websites</li>
+</ul>
+<p><strong>Watering Hole Attacks</strong>:</p>
+<ul>
+<li>Highly targeted</li>
+<li>has information on websites victim visit</li>
+<li>Then wait for them to visit</li>
+<li>Infect, and takes no action other visitor</li>
+</ul>
+<h4 id="malvertising"><a aria-hidden="true" class="anchor-heading" href="#malvertising"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Malvertising</h4>
+<ul>
+<li>Placing malware without comprimising website.</li>
+<li>targeted websites</li>
+<li>Dynamically generated reduce detection</li>
+<li>Stay for as little as few hours</li>
+</ul>
+<h4 id="clickjacking"><a aria-hidden="true" class="anchor-heading" href="#clickjacking"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Clickjacking</h4>
+<ul>
+<li>Lead user to belive they are typing in real UI(redress attack) but there is invisible interface stealing the data.</li>
+<li>Colecting users clicks</li>
+<li>Adjust browser setting </li>
+<li>Place button under legit button</li>
+<li>routing clicks to another site.</li>
+</ul>
+<h4 id="social-engineering"><a aria-hidden="true" class="anchor-heading" href="#social-engineering"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Social Engineering</h4>
+<ul>
+<li>Spam </li>
+<li>Trojan Horse</li>
+<li>Mobile phone trojans</li>
+</ul>
+<h4 id="payload-system-corruption"><a aria-hidden="true" class="anchor-heading" href="#payload-system-corruption"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Payload System Corruption</h4>
+<ol>
+<li>Chernobyl virus: over write first megabyte with zeros.</li>
+<li>Klez: Mass maling, can stop, delte antivirus programs, casue files to become empty</li>
+<li>Ransomware: Encrypts data and ask for ransom. </li>
+</ol>
+<h4 id="system-curruption"><a aria-hidden="true" class="anchor-heading" href="#system-curruption"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>System Curruption</h4>
+<ol>
+<li>Real-world Damage: cause physical, like changing BIOS like Chernobyl or Stuxnet target industrial</li>
+<li>Logic Bomb: embedded code in malware</li>
+</ol>
+<h4 id="information-theft"><a aria-hidden="true" class="anchor-heading" href="#information-theft"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Information Theft</h4>
+<ol>
+<li>Keylogger</li>
+<li>Spyware</li>
+</ol>
+<h4 id="phising"><a aria-hidden="true" class="anchor-heading" href="#phising"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Phising</h4>
+<ol>
+<li>Mascarading as trusted source</li>
+<li>Spear-phising: targeted</li>
+</ol>
+<h4 id="stealthing-rookit"><a aria-hidden="true" class="anchor-heading" href="#stealthing-rookit"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stealthing Rookit</h4>
+<ul>
+<li>gives root access to attacker</li>
+<li>Persistent: every time it boots</li>
+<li>Memory based: cant survive reboot</li>
+<li>User mode: intercept API calls, returns modified results</li>
+<li>Kernel Mode: Intercept native API, removel itself from kernel list</li>
+<li>VM: install it self in VM</li>
+<li>External Mode: direct access to hardware, BIOS, etc</li>
+</ul>
+<h4 id="malware-counter-measure"><a aria-hidden="true" class="anchor-heading" href="#malware-counter-measure"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Malware Counter Measure</h4>
+<p>Prevention</p>
+<ul>
+<li>Policy</li>
+<li>Awareness </li>
+<li>vulnerability mitigation</li>
+<li>Threat mitigation</li>
+</ul>
+<p>Mitigation:</p>
+<ul>
+<li>Detection</li>
+<li>identification</li>
+<li>Removal</li>
+</ul>
+<h4 id="anti-virus-generation"><a aria-hidden="true" class="anchor-heading" href="#anti-virus-generation"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Anti-virus Generation</h4>
+<ol>
+<li>Simple Scanner</li>
+<li>Heuristic Scanners</li>
+<li>Activity Traps(identify by action)</li>
+<li>Full-featured</li>
+</ol>
+<h4 id="sanbox-analysis"><a aria-hidden="true" class="anchor-heading" href="#sanbox-analysis"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sanbox Analysis</h4>
+<p>Run malware isolated to analyse the beahavior and to better detect in furute</p>
+<h4 id="host-based-behavior-blocking-software"><a aria-hidden="true" class="anchor-heading" href="#host-based-behavior-blocking-software"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Host-based behavior-blocking Software</h4>
+<p>It blocks potentially malicious actions before  they have a chance to happen</p>
+<h4 id="perimeter-scanning-approuches"><a aria-hidden="true" class="anchor-heading" href="#perimeter-scanning-approuches"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Perimeter Scanning Approuches</h4>
+<ul>
+<li>Anti-virus</li>
+<li>traffic analysis</li>
+<li>ingress and egress monitoring(wierd behaviors)</li>
+</ul>
+<h2 id="chapter-10---buffer-overflow"><a aria-hidden="true" class="anchor-heading" href="#chapter-10---buffer-overflow"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Chapter 10 - Buffer Overflow</h2>
+<p>Can occur in Stack, Heap, Data Section of proccess.</p>
+<p><strong>Consequences</strong>:</p>
+<ul>
+<li>Corruption</li>
+<li>Transfer control</li>
+<li>Memory Access violation</li>
+<li>Execution unknown code</li>
+</ul>
+<h4 id="attacks"><a aria-hidden="true" class="anchor-heading" href="#attacks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Attacks</h4>
+<ol>
+<li>Identify vulnerability</li>
+<li>How is the buffer been stored</li>
+</ol>
+<p><strong>Fuzzing tool</strong> for identification of vulnerable problems</p>
+<h4 id="stack-smashing"><a aria-hidden="true" class="anchor-heading" href="#stack-smashing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stack Smashing</h4>
+<ul>
+<li>Morris Worm exploits this vulnerability, vulnerable code like gets() fro C language. </li>
+<li>Uses return address to execute shellcode</li>
+</ul>
+<h4 id="shellcode"><a aria-hidden="true" class="anchor-heading" href="#shellcode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Shellcode</h4>
+<ul>
+<li>Normally used to trasnfer control of the CLI to the attacker with high privilages.</li>
+<li>Required good assambly skills</li>
+<li>Metasploit helps create shell code.</li>
+</ul>
+<h4 id="stack-overflow-variants"><a aria-hidden="true" class="anchor-heading" href="#stack-overflow-variants"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stack Overflow Variants</h4>
+<ul>
+<li>Targeted: system utility, Program library code(if not static linked), Network Deamon</li>
+<li>Shellcode Functionality: flush firewall, listening services, remote shell, privilage escalation, backdoor</li>
+</ul>
+<h4 id="buffer-overflow-defenses"><a aria-hidden="true" class="anchor-heading" href="#buffer-overflow-defenses"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Buffer Overflow Defenses</h4>
+<ol>
+<li><strong>Compile-Time:</strong> Harden new programs</li>
+</ol>
+<ul>
+<li>Use modern language: notion of type, not vulnerable BO, higher cost resources, limit usefullness, example creating drivers</li>
+<li>Safe Coding Techniques: inspect code, rewrite unsafe code, audited existing code base. </li>
+<li>Language Exntension/Safe Libraries: Handeling memory allocation, safer varients of functions</li>
+<li>Stack protection: GCC compiler extension(add dummy functions),check for corruption of stack</li>
+</ul>
+<ol start="2">
+<li><strong>Run-Time</strong>: detect and abort attacks, in exsisting programs</li>
+</ol>
+<ul>
+<li>Executable Address Space Protection: memory non executable</li>
+<li>Address Space Randomization</li>
+<li>Guard Page: Flagg MMU as illigal address, any attemp access abort</li>
+</ul>
+<h4 id="attack-replacement-stack-frame"><a aria-hidden="true" class="anchor-heading" href="#attack-replacement-stack-frame"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Attack: Replacement Stack Frame:</h4>
+<p>Replace stack frame with a dummy stack frame.</p>
+<blockquote>
+<p>Defense: randomization address, stack protection, non executable stack</p>
+</blockquote>
+<h4 id="return-system-call"><a aria-hidden="true" class="anchor-heading" href="#return-system-call"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Return System Call</h4>
+<ul>
+<li>Use retunr addres to execute shellcode
+<blockquote>
+<p>Defense: randomization address, stack protection, non executable stack</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="heap-overflow"><a aria-hidden="true" class="anchor-heading" href="#heap-overflow"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Heap Overflow</h4>
+<ul>
+<li>Located in the Heap, dynamic data structures</li>
+<li>No return address</li>
+<li>No easy to transafer control</li>
+</ul>
+<blockquote>
+<p>Defense: Making heap non executable, Randomize address allocation</p>
+</blockquote>
+<h4 id="global-data-overflow"><a aria-hidden="true" class="anchor-heading" href="#global-data-overflow"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Global Data Overflow</h4>
+<ul>
+<li>Attack buffer global data</li>
+<li>Vulnerable adjesent proccess</li>
+<li>Overwrite function pointer to later call</li>
+</ul>
+<blockquote>
+<p>defense: Non executable, move function pointers, guard pages</p>
+</blockquote>
+<h2 id="chapter-11---sofware-security"><a aria-hidden="true" class="anchor-heading" href="#chapter-11---sofware-security"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Chapter 11 - Sofware Security</h2>
+<h4 id="security-flaws"><a aria-hidden="true" class="anchor-heading" href="#security-flaws"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Security flaws</h4>
+<p>5 Security sofware flaws:</p>
+<ol>
+<li>Unvalidated Input</li>
+<li>Cross-Site Scripting</li>
+<li>Buffer overflow</li>
+<li>Injection Flaws</li>
+<li>Improper error handling</li>
+</ol>
+<p>NIST Reccommendation:</p>
+<ol>
+<li>Stop vulnerabilities before they occur</li>
+<li>Find vulnerabilities before they can be exploited</li>
+<li>Reduce impact of vulnerabilities by resilient architectures</li>
+</ol>
+<h4 id="sofware-security-quality-and-reliability"><a aria-hidden="true" class="anchor-heading" href="#sofware-security-quality-and-reliability"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sofware Security, Quality and Reliability:</h4>
+<ol>
+<li>Quality and Reliability: focus eliminate as many bugs possible. concern is not how many bugs but how often they are triggered.</li>
+<li>Security : Probability distribution for targeting bugs that result in failure and can be exploited. Triger by input that differ dramatically from what is usually expected.</li>
+</ol>
+<h4 id="defensive-programming"><a aria-hidden="true" class="anchor-heading" href="#defensive-programming"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Defensive Programming</h4>
+<p>Never assume anything, check all assumptions and handle any possible error states.</p>
+<h4 id="handling-program-inputs"><a aria-hidden="true" class="anchor-heading" href="#handling-program-inputs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Handling Program Inputs</h4>
+<ul>
+<li>Common</li>
+<li>Input is any source data from outside.</li>
+<li>Identify all data sources</li>
+<li>validate size and type</li>
+</ul>
+<h4 id="interpretation-of-program-input"><a aria-hidden="true" class="anchor-heading" href="#interpretation-of-program-input"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Interpretation of program Input</h4>
+<ul>
+<li>binary or text, binary depends on encoding</li>
+<li>Check are character types with care</li>
+<li>Fail to validate result in vurnerability</li>
+</ul>
+<p><strong>Injection attacks</strong> is by handeling input wrong way, attacker execute code.(scripting languages more often)</p>
+<h4 id="cross-site-attack-sctipting-xxs"><a aria-hidden="true" class="anchor-heading" href="#cross-site-attack-sctipting-xxs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Cross Site Attack Sctipting (XXS)</h4>
+<p>Input provided by one user is outputed by another user. Script in HTML Code, perform security checks and restrics data access to pages originating from the same site.</p>
+<h4 id="validating-input-syntax"><a aria-hidden="true" class="anchor-heading" href="#validating-input-syntax"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Validating Input Syntax</h4>
+<p>Compare against wanted string, compare input to dangerous values or accepting only know safe data.</p>
+<h4 id="alternate-encodings"><a aria-hidden="true" class="anchor-heading" href="#alternate-encodings"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Alternate Encodings</h4>
+<h4 id="input-fuzzing"><a aria-hidden="true" class="anchor-heading" href="#input-fuzzing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Input Fuzzing</h4>
+<p>Tetsing Technique for tetsing input to program.</p>
+<ul>
+<li>Handle abnormal inputs</li>
+<li>Template to genrate of know problems inputs</li>
+</ul>
+<h4 id="writing--safe-program-code"><a aria-hidden="true" class="anchor-heading" href="#writing--safe-program-code"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Writing  Safe Program Code</h4>
+<ol>
+<li>Correct algorithms implementation</li>
+<li>correct machine instruction for algorithm</li>
+<li>Valid manipulation of data</li>
+</ol>
+<h4 id="operating-system-interaction"><a aria-hidden="true" class="anchor-heading" href="#operating-system-interaction"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Operating System Interaction</h4>
+<ol>
+<li>Programs Execute under OS control(enviroment, variables. shares resource)</li>
+<li>System has concepts of multiple users(Lelvel Access, permission, shared,etc )</li>
+</ol>
+<p><strong>Enviroment Variable</strong>: string value inherityed by each proccess.</p>
+<h4 id="vulnerable-compiled-programs"><a aria-hidden="true" class="anchor-heading" href="#vulnerable-compiled-programs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Vulnerable Compiled Programs</h4>
+<ul>
+<li>Vulnerable to PATH manupulation</li>
+<li>Dynamically linked may be vulnerable to manupulation of PATH</li>
+</ul>
+<h4 id="preventing-race-conditions"><a aria-hidden="true" class="anchor-heading" href="#preventing-race-conditions"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Preventing Race Conditions</h4>
+<ul>
+<li>Use Synchronization mechanism to lock the shared file.</li>
+<li><code>Lockfile</code> to cooperater in sharing a file</li>
+</ul>
+<h2 id="operating-system-security"><a aria-hidden="true" class="anchor-heading" href="#operating-system-security"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Operating System Security</h2>
+<p>ASD = Australian Signals Directorate</p>
+<h4 id="strategies"><a aria-hidden="true" class="anchor-heading" href="#strategies"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Strategies</h4>
+<ul>
+<li>Over <strong>85%</strong> of targeted cyber intrusion by ASD in 2009 could have been prevented.</li>
+<li>Top 4 Strategy:</li>
+</ul>
+<ol>
+<li>White-list</li>
+<li>Patch third party app, and OP</li>
+<li>Restrict Administrative Priviliges  </li>
+<li>Create defense-in-depth system</li>
+</ol>
+<ul>
+<li>Align with "20 Critical Controls" by DHS</li>
+</ul>
+<h4 id="operating-system-security-1"><a aria-hidden="true" class="anchor-heading" href="#operating-system-security-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Operating System Security</h4>
+<ol>
+<li>Risk and plan system deployment</li>
+<li>Secure OP and apps</li>
+<li>Critical content secured</li>
+<li>Appropiate Network protection mechanism</li>
+<li>Appropiate proccess are used to maintain security</li>
+</ol>
+<h4 id="os-hardening"><a aria-hidden="true" class="anchor-heading" href="#os-hardening"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>OS Hardening</h4>
+<ol>
+<li>Intall, and Patch OS</li>
+<li>Configure OS</li>
+<li>Additional Security Controls</li>
+<li>Test the Security</li>
+</ol>
+<h4 id="data-backup-and-archive"><a aria-hidden="true" class="anchor-heading" href="#data-backup-and-archive"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Data Backup and Archive</h4>
+<ul>
+<li>Backup: making copy of data regularly</li>
+<li>Archive: retaining copies for periods of time
+(online, offline, local, remote)</li>
+</ul>
+<h4 id="windows-security"><a aria-hidden="true" class="anchor-heading" href="#windows-security"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Windows Security</h4>
+<ul>
+<li>Biba Integrity Model</li>
+<li>UAC User Account control</li>
+<li>Registry for configurations</li>
+<li>AES using BitLocker encryption file system</li>
+<li>EFS Encryption File System</li>
+</ul>
+<h4 id="virtualization"><a aria-hidden="true" class="anchor-heading" href="#virtualization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Virtualization</h4>
+<ul>
+<li>abstraction of resources  used by sofware in simulated enviroment</li>
+</ul>
+<h4 id="hypervisor"><a aria-hidden="true" class="anchor-heading" href="#hypervisor"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Hypervisor</h4>
+<ul>
+<li>Resource broker</li>
+<li>schedule VMs</li>
+<li>Virtual memory managemnt</li>
+<li>Context switching</li>
+<li>emulate networks</li>
+</ul>
+<h4 id="securing-virtualization"><a aria-hidden="true" class="anchor-heading" href="#securing-virtualization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Securing Virtualization</h4>
+<ul>
+<li>Plan, secure all elements</li>
+<li>Hypervisor properly secure</li>
+<li>Restric administrator access to VM</li>
+</ul>
+<h4 id="hypervisor-security"><a aria-hidden="true" class="anchor-heading" href="#hypervisor-security"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Hypervisor Security</h4>
+<ul>
+<li>SImilar to OS, configure firewall IDS, seperated networks</li>
+</ul>

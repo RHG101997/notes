@@ -1,0 +1,37 @@
+<h1 id="encoding-and-decoding"><a aria-hidden="true" class="anchor-heading" href="#encoding-and-decoding"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Encoding and Decoding</h1>
+<blockquote>
+<p>This notes are copied from several sources, including wikis, blogs, etc</p>
+</blockquote>
+<h2 id="why-is-used"><a aria-hidden="true" class="anchor-heading" href="#why-is-used"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Why is used:</h2>
+<p>Encoding and Decoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII.</p>
+<h2 id="types"><a aria-hidden="true" class="anchor-heading" href="#types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Types</h2>
+<p>There are several schemes for encoding and decoding, the most used are <code>base32</code> and <code>base64</code>.</p>
+<h3 id="base32"><a aria-hidden="true" class="anchor-heading" href="#base32"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Base32</h3>
+<p>Base-32 numeral system. It uses a set of 32 digits, each of which can be represented by 5 bits (25). One way to represent Base32 numbers in a human-readable way is by using a standard 32-character set, such as the twenty-two upper-case letters A–V and the digits 0-9.</p>
+<p><strong>Advantages:</strong>:</p>
+<ul>
+<li>The resulting character set is all one case, which can often be beneficial when using a case-insensitive filesystem, DNS names, spoken language, or human memory.</li>
+<li>The result can be used as a file name because it cannot possibly contain the '/' symbol, which is the Unix path separator.</li>
+<li>The alphabet can be selected to avoid similar-looking pairs of different symbols, so the strings can be accurately transcribed by hand. (For example, the RFC 4648 symbol set omits the digits for one, eight and zero, since they could be confused with the letters 'I', 'B', and 'O'.)</li>
+<li>A result excluding padding can be included in a URL without encoding any characters.</li>
+<li>Base32 representation takes roughly 20% - 21% less space. (1000 bits takes 200 characters, compared with 250 for Base16).</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>Base32 representation takes roughly 20% more space than Base64. Also, because it encodes 5 bytes to 8 characters (rather than 3 bytes to 4 characters), padding to an 8-character boundary is a greater burden on short messages.</li>
+</ul>
+<h3 id="base64"><a aria-hidden="true" class="anchor-heading" href="#base64"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Base64</h3>
+<p><strong>Advantages:</strong>:</p>
+<ul>
+<li>Uses less space compared to base16 and base32.</li>
+<li>Used to transport larger binary data, in ASCII format and smaller footprint.</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>More complex to decode, and it is also case sensitive.</li>
+</ul>
+<h2 id="optimization-to-save-binary-files-online"><a aria-hidden="true" class="anchor-heading" href="#optimization-to-save-binary-files-online"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Optimization to save binary files online.</h2>
+<p>There are several sofwares that will encode your images and other binaries files and help you to add it into your html. This is not always a good idea because as mention above when we are encoding data most of the time it will increase the size of the data by 25%. This will not only lead to bigger data, also higher download time.</p>
+<p>Another important factor is the CPU overhead, since the data is coming encoded the CPU needs to decode all the images/data taking also some of the resources of the machine.</p>
+<p>Cahching Issues are also present since when a user access a website the images, and other types of binary data are saved into a cache to be displayed later on. Meaning a higher file size will not be beneficial in these cases.</p>
+<p><strong>Other cases</strong>: Some times it is a good idea to use encoded data in places where the link is bigger than the actual <code>base64</code> data. This will also include logos,and small images and helps the recipient not deal with permissio queries to download by email client.</p>

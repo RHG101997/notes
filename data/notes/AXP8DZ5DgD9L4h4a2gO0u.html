@@ -1,0 +1,41 @@
+<h1 id="publish-notes"><a aria-hidden="true" class="anchor-heading" href="#publish-notes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Publish-Notes</h1>
+<h2 id="how-to-publish-my-notesremainder"><a aria-hidden="true" class="anchor-heading" href="#how-to-publish-my-notesremainder"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>How to publish my Notes(Remainder):</h2>
+<p>Here I will save several of the commands that are required to publish my notes to public. Also to get the most up to date notes please <code>git clone</code> the repository since the procedure for publishing needs to be performed by a computer that has all the requirements. Explain in the next section.</p>
+<p>References: <a href="https://wiki.dendron.so/notes/23a1b942-99af-45c8-8116-4f4bb7dccd21/">Here</a></p>
+<h3 id="requirements"><a aria-hidden="true" class="anchor-heading" href="#requirements"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Requirements:</h3>
+<ul>
+<li><code>Node.js</code> is required</li>
+<li>Intallation of <code>dendron-cli</code></li>
+</ul>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># intall</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g @dendronhq/dendron-cli
+<span class="token comment"># upgrade</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g @dendronhq/dendron-cli@latest
+
+</code></pre>
+<ul>
+<li>Setup if it is the first time running in this workspace. Initialize dendron-cli</li>
+</ul>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># Init nodejs</span>
+<span class="token function">npm</span> init -y 
+<span class="token comment"># install in directory</span>
+<span class="token function">npm</span> <span class="token function">install</span> @dendronhq/dendron-cli
+
+<span class="token comment"># Update .gitignore</span>
+<span class="token builtin class-name">echo</span> .next <span class="token operator">>></span> .gitignore
+<span class="token comment"># Clone the nextjs repository and install dependencies</span>
+npx dendron publish init
+</code></pre>
+<h3 id="publishing-commands"><a aria-hidden="true" class="anchor-heading" href="#publishing-commands"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Publishing Commands</h3>
+<p>For building and Previewing( <code>https://localhost:3000</code>):</p>
+<pre class="language-bash"><code class="language-bash">npx dendron publish dev
+</code></pre>
+<p><strong>For publishing we need to run a export with a <code>github</code> target:</strong></p>
+<pre class="language-bash"><code class="language-bash">dendron publish <span class="token builtin class-name">export</span> --target github
+
+<span class="token comment"># Deployment</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"dendron page update"</span>
+<span class="token function">git</span> push
+</code></pre>
+<p>After this the website should update in a few seconds.</p>

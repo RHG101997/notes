@@ -1,0 +1,49 @@
+<h1 id="c-const"><a aria-hidden="true" class="anchor-heading" href="#c-const"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>C++ Const</h1>
+<h2 id="const-with-functions"><a aria-hidden="true" class="anchor-heading" href="#const-with-functions"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><code>const</code> with functions</h2>
+<p>Reference: <a href="https://www.youtube.com/watch?v=RC7uE_wl1Uc&#x26;ab_channel=BoQian">Video</a></p>
+<p>Using const in methods examples, and can be used for more efficiency.</p>
+<pre class="language-cpp"><code class="language-cpp">
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Class Memebers</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    string name<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>age <span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span> name <span class="token operator">=</span> <span class="token string">"dummy"</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    
+    <span class="token comment">// Const parameter</span>
+    <span class="token keyword">void</span> <span class="token function">setAge</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">&#x26;</span> a <span class="token punctuation">)</span> <span class="token punctuation">{</span>age <span class="token operator">=</span> a<span class="token punctuation">;</span><span class="token punctuation">}</span> <span class="token comment">// Correct[ pass by reference and can't be changed]</span>
+    <span class="token keyword">void</span> <span class="token function">setAge</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> a <span class="token punctuation">)</span> <span class="token punctuation">{</span>age <span class="token operator">=</span> a<span class="token punctuation">;</span><span class="token punctuation">}</span> <span class="token comment">// const is not useful here</span>
+    <span class="token keyword">void</span> <span class="token function">setAge</span> <span class="token punctuation">(</span><span class="token keyword">int</span> a <span class="token punctuation">)</span> <span class="token punctuation">{</span>age <span class="token operator">=</span> a<span class="token punctuation">;</span><span class="token punctuation">}</span> <span class="token comment">// similar</span>
+
+    <span class="token comment">//  Const return value</span>
+    <span class="token keyword">const</span> string<span class="token operator">&#x26;</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> name<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// pass by reference "more efficient"</span>
+
+    <span class="token comment">//const function [Means it will not modify any members of the class]</span>
+    <span class="token keyword">void</span> <span class="token function">printDogName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&#x3C;&#x3C;</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&#x3C;&#x3C;</span> <span class="token string">"const"</span> <span class="token operator">&#x3C;&#x3C;</span> endl<span class="token punctuation">;</span> <span class="token comment">// const functions can only called const functions</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// Overload const function (will be called if instance of the class is const)</span>
+    <span class="token keyword">void</span> <span class="token function">printDogName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&#x3C;&#x3C;</span> name <span class="token operator">&#x3C;&#x3C;</span> <span class="token string">"non-const"</span> <span class="token operator">&#x3C;&#x3C;</span> endl<span class="token punctuation">;</span> <span class="token comment">// const functions can only called const functions</span>
+    <span class="token punctuation">}</span> 
+     
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// Call regular</span>
+    Dog d<span class="token punctuation">;</span>
+    d<span class="token punctuation">.</span><span class="token function">printDogName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Call overloaded </span>
+    <span class="token keyword">const</span> Dog d2<span class="token punctuation">;</span>
+    d2<span class="token punctuation">.</span><span class="token function">printDogName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+</code></pre>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/notes/2yA501ntEdXEMxKAJrL7o">C++</a></li>
+</ul>

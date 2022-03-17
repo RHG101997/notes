@@ -1,0 +1,24 @@
+<h1 id="makefile"><a aria-hidden="true" class="anchor-heading" href="#makefile"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Makefile</h1>
+<h3 id="what-is-makefile"><a aria-hidden="true" class="anchor-heading" href="#what-is-makefile"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>What is Makefile</h3>
+<p>File type that is used for compiling and linking programs from source code files. Makefiles contain five kinds of things: explicit rules, implicit rules, variable definitions, directives, and comments.</p>
+<h3 id="useful-makefile"><a aria-hidden="true" class="anchor-heading" href="#useful-makefile"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Useful Makefile</h3>
+<p>This make file can be usefull for small projects</p>
+<pre class="language-shell"><code class="language-shell">
+<span class="token assign-left variable">CC</span><span class="token operator">=</span>gcc
+<span class="token assign-left variable">RM</span><span class="token operator">=</span>rm
+<span class="token assign-left variable">CFLAGS</span><span class="token operator">=</span>-g -Wall
+<span class="token assign-left variable">OBJS</span><span class="token operator">=</span>somefile.o
+<span class="token assign-left variable">BIN</span><span class="token operator">=</span>main
+
+all:<span class="token variable"><span class="token variable">$(</span>BIN<span class="token variable">)</span></span>
+
+main:<span class="token variable"><span class="token variable">$(</span>OBJS<span class="token variable">)</span></span>
+    <span class="token variable"><span class="token variable">$(</span>CC<span class="token variable">)</span></span> <span class="token variable"><span class="token variable">$(</span>CFLAGS<span class="token variable">)</span></span> <span class="token variable"><span class="token variable">$(</span>OBJS<span class="token variable">)</span></span> -o main
+
+%.o: %.c
+    <span class="token variable"><span class="token variable">$(</span>CC<span class="token variable">)</span></span> <span class="token variable"><span class="token variable">$(</span>CFLAGS<span class="token variable">)</span></span> -c $<span class="token operator">&#x3C;</span> -o <span class="token variable">$@</span>
+
+clean: 
+    <span class="token variable"><span class="token variable">$(</span>RM<span class="token variable">)</span></span> -r main *.o
+
+</code></pre>

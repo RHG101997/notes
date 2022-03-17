@@ -1,0 +1,30 @@
+<h1 id="mpc"><a aria-hidden="true" class="anchor-heading" href="#mpc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>MPC</h1>
+<h2 id="multiparty-computationmpc-or-secure-mpc-smpc"><a aria-hidden="true" class="anchor-heading" href="#multiparty-computationmpc-or-secure-mpc-smpc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Multiparty Computation(MPC) or Secure MPC (SMPC)</h2>
+<p><strong>Secure multi-party computation (SMPC)</strong> is a cryptographic technique that allows multiple people to compute a function, where the function itself and its outputs are public, but the inputs are kept private to each person.</p>
+<p>Protocols: </p>
+<ul>
+<li><strong>Threshold secret sharing</strong></li>
+<li><strong>Oblivious Transafer(OT)</strong> allow two parties to transfer two encrypted messages from one party to the next in a way that ensures the messages were sent and received, but the sender doesn't know which one of the messages the receiver chose to open.</li>
+<li><strong>Private Set Intersection(PSI)</strong></li>
+<li><strong>Garbled Boolean circuits</strong> are encrypted versions of digital logic circuits, consisting of hardware or programmed wires and logic gates that follow a prescribed logic when computing a function. To “garble” the circuit means encrypting the possible input combinations and possible outputs, described in the so-called truth tables at the logic gates. Then, each logic gate outputs cryptographic keys used to unlock the output of the next gate, a process set forth until arriving at the final result.</li>
+<li><strong>Shamir's secret sharing</strong>, data (for example, personal data or a machine learning model) is split up into fragments, which in themselves do not contain any usable information. The secret shares are distributed amongst a set of parties to perform secure computation over the shares, releasing output to a designated party once done.</li>
+</ul>
+<p>To elevate the privacy posture and cover more use cases, MPC is often combined with federated learning, homomorphic encryption and differential privacy.</p>
+<p>Reference: </p>
+<ul>
+<li><a href="https://iapp.org/news/a/multiparty-computation-as-supplementary-measure-and-potential-data-anonymization-tool/">Multiparty computation as supplementary measure and potential data anonymization tool</a></li>
+<li><a href="https://www.cs.virginia.edu/~evans/pragmaticmpc/pragmaticmpc.pdf">A Pragmatic Introduction to Secure Multi-Party Computation</a></li>
+<li><a href="https://deltampc.com/en">Out of the Box, Blockchain Powered Verifiable PPC Framework</a></li>
+</ul>
+<h3 id="private-set-intersectionpsi"><a aria-hidden="true" class="anchor-heading" href="#private-set-intersectionpsi"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Private Set Intersection(PSI)</h3>
+<blockquote>
+<p>Maybe can be implemented in IoT devices.</p>
+</blockquote>
+<p>PSI References: <a href="https://csrc.nist.gov/CSRC/media//Projects/pec/documents/stppa-02-PSI-rosulek.pdf">Efficient Batched Oblivious PRF with Applications to Private Set Intersection</a></p>
+<h3 id="what-is-oblivious-transaferot"><a aria-hidden="true" class="anchor-heading" href="#what-is-oblivious-transaferot"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>What is Oblivious Transafer(OT)</h3>
+<p>Oblivious Transfer (OT) has been a central primitive in the area of secure computation.</p>
+<p>References:
+<a href="https://eprint.iacr.org/2015/267.pdf">The Simplest Protocol for Oblivious Transfer</a>
+<a href="https://github.com/mkskeller/SimpleOT/tree/84d73522619f90ba2aabce8d660baef1442aa26d">SimpleOT Github</a></p>
+<h3 id="secret-sharing"><a aria-hidden="true" class="anchor-heading" href="#secret-sharing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Secret Sharing</h3>
+<p> <img align="center" src="https://github-readme-stats.vercel.app/api?username=rhg101997&#x26;show_icons=true&#x26;locale=en" alt="rhg101997"></p>
