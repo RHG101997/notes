@@ -333,7 +333,37 @@ Full Mesh: every node is connected to every node
             * Digital Proccessor(DSP): Proccess large data streams, parallelizing.
             * Field-Proggrammble Gate Arrays(FPGA): Special harware, expensive, limited configuration
             * Application-Specfific Integrated Circuits(ASIC): Special hardware designed only for one application, possible embedding several MCU or DSP cores. 
-        * 
+
+> HW1: Source Routing(know the whole path)  vs Distance Vector(only know the neighbor distance)
+> Source: Does routing computation before sending, nobody keeps other information.
+
+
+4. MAC for Wireless Enviroments
+    * What is MAC: open, brodcast medium, limited bandwidth, multiple user
+    * MAC Protocols: Multiple Access Control, Medium Access, or Media Access
+    * Expected from MAC Protocol: limted delay, high throughput, fairness, scalability, stability, low power consumption. QoS, robustness agaisnt channel fading
+    * Problems: Half duplex,Packet Loss, location depended, limted battery time, Time Varying Channel,
+    * Causes energy waste: Collision, Control packet overhead, overhearing unnecessary traffic, Long Idle time (**Dominat Factor**)
+    * _Important_ Random Access PRoblem: Hidden and Exposed terminal
+    * Distributed and Centralized MAC Protocol
+
+5. Wireless LAN Standard (802.11 - 1999)
+    * Provides a MAC and Physical functionality
+    * Frequency allocation: alll user must operate on a common freq. band
+    * Inference and reliability: Collision, Security, Power cons., Human safety, Mobility
+    * Std today: 802.11ac Max: 1300 Mbps OFDM/QAM
+    * 5 GHz
+    * MIMO Multiple Input and MUltiple output
+    * Two Operational Modes: 
+        * Infratructure Mode
+            * BBS Basic Service Set
+            * Extended Service set (ESS)
+        * Ad-hoc: IBSS Independent Basic Service Set
+    * CSMA/CA with ACK
+    * Wifi solution to exposed and hidden terminal is RTS(Request to send) and CTS(Clear to send)  Virtual Carrier Sensing
+    * RTS 20 bytes and CTS 16 bytes
+    * 
+
 
 
 
